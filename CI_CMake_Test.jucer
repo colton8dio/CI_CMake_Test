@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<JUCERPROJECT name="AudioPluginDemo" companyName="JUCE" version="1.0.0" userNotes="Synthesiser audio plugin."
+<JUCERPROJECT name="CI_CMake_Test" companyName="JUCE" userNotes="Synthesiser audio plugin."
               companyWebsite="http://juce.com" displaySplashScreen="1" defines="PIP_JUCE_EXAMPLES_DIRECTORY=L1VzZXJzL0NvbHRvbkRvZGQvQXBwbGljYXRpb25zL0pVQ0UvZXhhbXBsZXM="
               projectType="audioplug" pluginAUIsSandboxSafe="1" pluginManufacturer="JUCE"
               pluginFormats="buildAAX,buildAU,buildStandalone,buildVST,buildVST3"
               pluginCharacteristicsValue="pluginIsSynth,pluginWantsMidiIn,pluginProducesMidiOut,pluginEditorRequiresKeys"
               useAppConfig="0" addUsingNamespaceToJuceHeader="1" id="ajqims"
               jucerFormatVersion="1">
-  <MAINGROUP id="tFVjOe" name="AudioPluginDemo">
+  <MAINGROUP id="tFVjOe" name="CI_CMake_Test">
     <GROUP id="{348E47DC-5F04-6AA6-FE6F-10718C1A835D}" name="Source">
       <FILE id="B6Dgst" name="Main.cpp" compile="1" resource="0" file="Source/Main.cpp"/>
       <FILE id="baBlMG" name="AudioPluginDemo.h" compile="0" resource="0"
