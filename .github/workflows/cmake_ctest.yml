@@ -24,13 +24,14 @@ env:
 # all steps run in series
 jobs:
   build_and_test:
-    name: run settings
-    runs-on: [self-hosted, ${{ matrix.os }}]
+    name: ${{ matrix.name }}
+    runs-on: ${{ matrix.runner }}
     strategy:
       fail-fast: false # show all errors for each platform (vs. cancel jobs on error)
       matrix:
         include:
           - name: macOS
+            runner: [self-hosted, macos]
             os: macos-12
             pluginval-binary: pluginval.app/Contents/MacOS/pluginval
 
