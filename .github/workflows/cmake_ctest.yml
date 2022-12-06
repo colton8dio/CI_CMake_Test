@@ -24,7 +24,7 @@ env:
 # all steps run in series
 jobs:
   build_and_test:
-    name: ${{ matrix.name }}
+    name: run settings
     runs-on: [self-hosted, ${{ matrix.os }}]
     strategy:
       fail-fast: false # show all errors for each platform (vs. cancel jobs on error)
