@@ -63,7 +63,7 @@ target_compile_features("${PROJECT_NAME}" PRIVATE cxx_std_20)
 # Manually list all .h and .cpp files for the plugin
 set(SourceFiles
     Source/AudioPluginDemo
-    Source/Main
+    Source/Main)
 
 target_sources("${PROJECT_NAME}" PRIVATE ${SourceFiles})
 
