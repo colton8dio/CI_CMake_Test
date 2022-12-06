@@ -1,0 +1,8 @@
+# build artifacts
+Builds/
+JuceLibraryCode/
+
+
+
+# Mac extras
+.DS_Store
