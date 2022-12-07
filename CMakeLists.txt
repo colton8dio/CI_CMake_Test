@@ -33,8 +33,6 @@ set_property(GLOBAL PROPERTY USE_FOLDERS YES)
 # Create a /Modules directory in the IDE with the JUCE Module code
 option(JUCE_ENABLE_MODULE_SOURCE_GROUPS "Show all module sources in IDE projects" ON)
 
-# Generates a JuceHeader.h which contains #include statements for each of the module headers
-juce_generate_juce_header(${PROJECT_NAME})
 
 # JUCE is setup as a submodule in the /JUCE folder
 # Locally, you'll need to run `git submodule update --init --recursive` once
@@ -60,6 +58,10 @@ juce_add_plugin("${PROJECT_NAME}"
     FORMATS "${FORMATS}"
     PRODUCT_NAME "${PROJECT_NAME}"
     )                                           # The name of the final executable, which can differ from the target name
+
+
+# Generates a JuceHeader.h which contains #include statements for each of the module headers
+juce_generate_juce_header(${PROJECT_NAME})
 
 # C++20 please
 target_compile_features("${PROJECT_NAME}" PRIVATE cxx_std_20)
