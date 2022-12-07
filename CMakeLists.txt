@@ -55,7 +55,8 @@ juce_add_plugin("${PROJECT_NAME}"
     PLUGIN_MANUFACTURER_CODE Jucetest           # This has to be one uppercase, rest lower for AU formats
     PLUGIN_CODE J001                            # A unique four-character plugin id with at least one upper-case character
     FORMATS "${FORMATS}"
-    PRODUCT_NAME "${PROJECT_NAME}")        # The name of the final executable, which can differ from the target name
+    PRODUCT_NAME "${PROJECT_NAME}"
+    )                                           # The name of the final executable, which can differ from the target name
 
 # C++20 please
 target_compile_features("${PROJECT_NAME}" PRIVATE cxx_std_20)
@@ -63,7 +64,8 @@ target_compile_features("${PROJECT_NAME}" PRIVATE cxx_std_20)
 # Manually list all .h and .cpp files for the plugin
 set(SourceFiles
     Source/AudioPluginDemo
-    Source/Main)
+    Source/Main
+    )
 
 target_sources("${PROJECT_NAME}" PRIVATE ${SourceFiles})
 
@@ -97,7 +99,8 @@ foreach(target ${FORMATS} "All")
             XCODE_SCHEME_EXECUTABLE "${CMAKE_CURRENT_SOURCE_DIR}/JUCE/extras/AudioPluginHost/Builds/MacOSX/build/Debug/AudioPluginHost.app"
 
             # Let us build the target in Xcode
-            XCODE_GENERATE_SCHEME ON)
+            XCODE_GENERATE_SCHEME ON
+            )
     endif()
 endforeach()
 set_target_properties(Assets PROPERTIES FOLDER "Targets")
