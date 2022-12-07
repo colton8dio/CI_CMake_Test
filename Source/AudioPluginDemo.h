@@ -23,7 +23,7 @@
 
  BEGIN_JUCE_PIP_METADATA
 
- name:                  AudioPluginDemo
+ name:                  CI_CMake_Test
  version:               1.0.0
  vendor:                JUCE
  website:               http://juce.com
