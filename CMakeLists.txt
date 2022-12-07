@@ -33,6 +33,9 @@ set_property(GLOBAL PROPERTY USE_FOLDERS YES)
 # Create a /Modules directory in the IDE with the JUCE Module code
 option(JUCE_ENABLE_MODULE_SOURCE_GROUPS "Show all module sources in IDE projects" ON)
 
+# Generates a JuceHeader.h which contains #include statements for each of the module headers
+juce_generate_juce_header(${PROJECT_NAME})
+
 # JUCE is setup as a submodule in the /JUCE folder
 # Locally, you'll need to run `git submodule update --init --recursive` once
 # and `git submodule update --remote --merge` to keep it up to date
