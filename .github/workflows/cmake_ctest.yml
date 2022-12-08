@@ -124,6 +124,11 @@ jobs:
         SetFile -a C ${{ env.VST3_PATH }}
         SetFile -a C ${{ env.AU_PATH }}
 
+    # You'll need an account with NPM to install and use this. https://www.npmjs.com/signup (maybe add this to Install macOS Deps)
+      # touch ~/.zshrc
+      # curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash
+      # nvm install node --reinstall-packages-from=node
+      # nvm install-latest-npm
     - name: Create DMG, Notarize and Staple (macOS)
       if: ${{ matrix.name == 'macOS' }}
       run: |
