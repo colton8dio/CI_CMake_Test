@@ -129,6 +129,7 @@ jobs:
       # curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash
       # nvm install node --reinstall-packages-from=node
       # nvm install-latest-npm
+      # ensure everything is connected properly in the packages folder. The Json and .iss file needs to be updated with correct project names
     - name: Create DMG, Notarize and Staple (macOS)
       if: ${{ matrix.name == 'macOS' }}
       run: |
@@ -144,7 +145,7 @@ jobs:
 
         # Run appdmg to create the .dmg
         cd packaging && appdmg dmg.json ${{ env.PRODUCT_NAME}}.dmg
-        codesign -s "${{ secrets.DEVELOPER_ID_APPLICATION}}" --timestamp -i com.pamplejuce.pamplejuce --force ${{ env.PRODUCT_NAME }}.dmg
+        codesign -s "${{ secrets.DEVELOPER_ID_APPLICATION}}" --timestamp -i com.jucetest.jucetest --force ${{ env.PRODUCT_NAME }}.dmg
         xcrun notarytool submit ${{ env.PRODUCT_NAME }}.dmg --apple-id ${{ secrets.NOTARIZATION_USERNAME }} --password ${{ secrets.NOTARIZATION_PASSWORD }} --team-id ${{ secrets.TEAM_ID }} --wait
         xcrun stapler staple ${{ env.PRODUCT_NAME }}.dmg
 

@@ -1,6 +1,6 @@
 {
-  "title": "Pamplejuce",
-  "icon": "pamplejuce.icns",
+  "title": "CI_CMake_Test",
+  "icon": "CI_CMake_Test.icns",
   "background": "background.jpg",
   "window": {
     "position": {
@@ -14,9 +14,9 @@
   },
   "format": "UDZO",
   "contents": [
-    { "x": 250, "y": 245, "type": "file", "path": "dmg/Pamplejuce.component" },
+    { "x": 250, "y": 245, "type": "file", "path": "dmg/CI_CMake_Test.component" },
     { "x": 480, "y": 245, "type": "file", "path": "dmg/Your Mac's Component Folder" },
-    { "x": 250, "y": 405, "type": "file", "path": "dmg/Pamplejuce.vst3" },
+    { "x": 250, "y": 405, "type": "file", "path": "dmg/CI_CMake_Test.vst3" },
     { "x": 480, "y": 405, "type": "file", "path": "dmg/Your Mac's VST3 Folder" }
   ]
 }

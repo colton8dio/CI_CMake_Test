@@ -2,10 +2,10 @@
 #define Year GetDateTimeString("yyyy","","")
 
 [Setup]
-AppName=Pamplejuce
-OutputBaseFilename=Pamplejuce-{#Version}-Windows
-AppCopyright=Copyright (C) {#Year} Melatonin
-AppPublisher=Melatonin
+AppName=CI_CMake_Test
+OutputBaseFilename=CI_CMake_Test-{#Version}-Windows
+AppCopyright=Copyright (C) {#Year} JUCE
+AppPublisher=JUCE
 AppVersion={#Version}
 DefaultDirName="{commoncf64}\VST3"
 DisableStartupPrompt=yes
