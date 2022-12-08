@@ -41,7 +41,9 @@ jobs:
       # ninja is a build system for CMake for faster builds https://ninja-build.org
     - name: Install macOS Deps
       if: ${{ matrix.name == 'macOS' }}
-      run: brew install ninja osxutils
+      run: |
+        brew install ninja osxutils
+        brew install p7zip
 
       # Grabs JUCE git (idk how checkouts work)
     - name: Checkout code
@@ -66,7 +68,7 @@ jobs:
       with:
         key: v2-${{ matrix.os }}-${{ matrix.type }}
 
-  # Need apple secrets, p12 stuff set up
+  # Need apple secrets, p12 stuff set up. Related to -name Codesign (macOs)
   #  - name: Import Certificates (macOS)
   #    uses: apple-actions/import-codesign-certs@v1
   #    if: ${{ matrix.name == 'macOS' }}
@@ -95,13 +97,14 @@ jobs:
         7z x pluginval_${{ matrix.name }}.zip
         ${{ matrix.pluginval-binary }} --strictness-level 10 --verbose --validate "${{ env.VST3_PATH }}"
 
-    - name: Codesign (macOS)
-      working-directory: ${{ env.BUILD_DIR }}
-      if: ${{ matrix.name == 'macOS' }}
-      run: |
+  # Need code signing stuff or will get error. Releated to -name Import Certificates (macOS)
+    #- name: Codesign (macOS)
+    #  working-directory: ${{ env.BUILD_DIR }}
+    #  if: ${{ matrix.name == 'macOS' }}
+    #  run: |
         # Each plugin must be code signed
-        codesign --force -s "${{ secrets.DEVELOPER_ID_APPLICATION}}" -v ${{ env.VST3_PATH }} --deep --strict --options=runtime --timestamp
-        codesign --force -s "${{ secrets.DEVELOPER_ID_APPLICATION}}" -v ${{ env.AU_PATH }} --deep --strict --options=runtime --timestamp
+    #    codesign --force -s "${{ secrets.DEVELOPER_ID_APPLICATION}}" -v ${{ env.VST3_PATH }} --deep --strict --options=runtime --timestamp
+    #    codesign --force -s "${{ secrets.DEVELOPER_ID_APPLICATION}}" -v ${{ env.AU_PATH }} --deep --strict --options=runtime --timestamp
 
     - name: Add Custom Icons (macOS)
       if: ${{ matrix.name == 'macOS' }}
@@ -139,11 +142,6 @@ jobs:
         codesign -s "${{ secrets.DEVELOPER_ID_APPLICATION}}" --timestamp -i com.pamplejuce.pamplejuce --force ${{ env.PRODUCT_NAME }}.dmg
         xcrun notarytool submit ${{ env.PRODUCT_NAME }}.dmg --apple-id ${{ secrets.NOTARIZATION_USERNAME }} --password ${{ secrets.NOTARIZATION_PASSWORD }} --team-id ${{ secrets.TEAM_ID }} --wait
         xcrun stapler staple ${{ env.PRODUCT_NAME }}.dmg
-
-    - name: Zip
-      if: ${{ matrix.name == 'Linux' }}
-      working-directory: ${{ env.ARTIFACTS_PATH }}
-      run: 7z a -tzip ${{ env.PRODUCT_NAME }}.zip .
 
     - name: Generate Installer and Sign with EV cert on Azure (Windows)
       if: ${{ matrix.name == 'Windows' }}
