@@ -35,6 +35,11 @@ jobs:
             os: macos-12
             pluginval-binary: pluginval.app/Contents/MacOS/pluginval
           # inlcude another matrix set up for windows (make sure name matches pluginval URL)
+          - name: Windows
+            runner: [self-hosted, windows]
+            os: windows-latest
+            pluginval-binary: ./pluginval.exe
+
 
     steps:
       # Add pluginval brew here?
