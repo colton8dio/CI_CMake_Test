@@ -82,6 +82,7 @@ jobs:
 
       # A cache compiler to speed up build times. https://github.com/ccache/ccache
     - name: ccache
+      if: ${{ matrix.name == 'macOS' }}
       uses: hendrikmuhs/ccache-action@v1.2
       with:
         key: v2-${{ matrix.os }}-${{ matrix.type }}
