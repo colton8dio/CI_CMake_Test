@@ -56,8 +56,17 @@ jobs:
       with:
         submodules: true # Gotta get JUCE populated
 
-      # Establish variables
+  - name: Setup Environment Variables
+    if: ${{ matrix.name == 'Windows' }}
+    shell: bash
+    run: |
+      VERSION=$(cat VERSION)
+
+
+
+    # Establish variables
     - name: Setup Environment Variables
+      if: ${{ matrix.name == 'macOS' }}
       shell: bash
       run: |
         VERSION=$(cat VERSION)
@@ -142,7 +151,7 @@ jobs:
         npm install -g appdmg
         mkdir -p packaging/dmg
 
-        # Create directories for the dmg symlinks
+      # Create directories for the dmg symlinks
         sudo mkdir -m 755 -p /Library/Audio/Plug-Ins/Components && sudo mkdir -m 755 -p /Library/Audio/Plug-Ins/VST3 && sudo mkdir -m 755 -p ~/Desktop
         ln -s /Library/Audio/Plug-Ins/Components "packaging/dmg/Your Mac's Component folder"
         ln -s /Library/Audio/Plug-Ins/VST3 "packaging/dmg/Your Mac's VST3 folder"
