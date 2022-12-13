@@ -56,14 +56,20 @@ jobs:
       with:
         submodules: true # Gotta get JUCE populated
 
+    # Establish variables
     - name: Setup Environment Variables on windows
       if: ${{ matrix.name == 'Windows' }}
-      shell: bash
+      shell: pwsh
       run: |
+        "mypath" >> $env:GITHUB_PATH
         VERSION=$(cat VERSION)
+        "ARTIFACTS_PATH=${{ env.BUILD_DIR }}/${{ env.PROJECT_NAME }}_artefacts/${{ env.BUILD_TYPE }}" >> $env.$GITHUB_ENV
+        "VST3_PATH=${{ env.PROJECT_NAME }}_artefacts/${{ env.BUILD_TYPE }}/VST3/${{ env.PROJECT_NAME }}.vst3" >> $env.$GITHUB_ENV
+        "AU_PATH=${{ env.PROJECT_NAME }}_artefacts/${{ env.BUILD_TYPE }}/AU/${{ env.PROJECT_NAME }}.component" >> $env.$GITHUB_ENV
+        "AUV3_PATH=${{ env.PROJECT_NAME }}_artefacts/${{ env.BUILD_TYPE }}/AUv3/${{ env.PROJECT_NAME }}.appex" >> $env.$GITHUB_ENV
+        "PRODUCT_NAME=${{ env.PROJECT_NAME }}-$VERSION-${{ matrix.name }}" >> $env.$GITHUB_ENV
 
-    # Establish variables
-    - name: Setup Environment Variables
+    - name: Setup Environment Variables on macOS
       if: ${{ matrix.name == 'macOS' }}
       shell: bash
       run: |
