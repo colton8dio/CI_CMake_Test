@@ -62,7 +62,7 @@ jobs:
       shell: pwsh
       run: |
         "mypath" >> $env:GITHUB_PATH
-        Get-Content VERSION
+        VERSION = Get-Content VERSION
         "ARTIFACTS_PATH=${{ env.BUILD_DIR }}/${{ env.PROJECT_NAME }}_artefacts/${{ env.BUILD_TYPE }}" >> $env.$GITHUB_ENV
         "VST3_PATH=${{ env.PROJECT_NAME }}_artefacts/${{ env.BUILD_TYPE }}/VST3/${{ env.PROJECT_NAME }}.vst3" >> $env.$GITHUB_ENV
         "AU_PATH=${{ env.PROJECT_NAME }}_artefacts/${{ env.BUILD_TYPE }}/AU/${{ env.PROJECT_NAME }}.component" >> $env.$GITHUB_ENV
