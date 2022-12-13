@@ -58,12 +58,12 @@ jobs:
         echo ::add-path::C:\msys64\usr\bin
         dir C:\msys64\usr\bin
 
-      - name:  shell: bash.exe
-        if: ${{ matrix.name == 'Windows' }}
-        shell: bash
-        run: |
-          openssl version -d
-          pwd
+    - name:  shell: bash.exe
+      if: ${{ matrix.name == 'Windows' }}
+      shell: bash
+      run: |
+        openssl version -d
+        pwd
 
       # Grabs JUCE git (idk how checkouts work)
     - name: Checkout code
