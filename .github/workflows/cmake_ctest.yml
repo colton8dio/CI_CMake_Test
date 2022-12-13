@@ -51,17 +51,17 @@ jobs:
         brew install p7zip
 
       # Fixing windows bash path
-    - name:  "add-path"
+    - name:  add-path
       if: ${{ matrix.name == 'Windows' }}
       shell: cmd
-      run:   |
+      run: |
         echo ::add-path::C:\msys64\usr\bin
         dir C:\msys64\usr\bin
 
-      - name:  "shell: bash.exe"
+      - name:  shell: bash.exe
         if: ${{ matrix.name == 'Windows' }}
         shell: bash
-        run:   |
+        run: |
           openssl version -d
           pwd
 
