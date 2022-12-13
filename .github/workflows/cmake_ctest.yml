@@ -58,7 +58,7 @@ jobs:
 
     - name: Setup Environment Variables on windows
       if: ${{ matrix.name == 'Windows' }}
-      shell: bash
+      shell: bash.exe
       run: |
         VERSION=$(cat VERSION)
 
