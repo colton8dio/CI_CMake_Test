@@ -62,130 +62,128 @@ jobs:
       run: |
         VERSION=$(cat VERSION)
 
+    # Establish variables
+    - name: Setup Environment Variables
+      if: ${{ matrix.name == 'macOS' }}
+      shell: bash
+      run: |
+        VERSION=$(cat VERSION)
+        echo "ARTIFACTS_PATH=${{ env.BUILD_DIR }}/${{ env.PROJECT_NAME }}_artefacts/${{ env.BUILD_TYPE }}" >> $GITHUB_ENV
+        echo "VST3_PATH=${{ env.PROJECT_NAME }}_artefacts/${{ env.BUILD_TYPE }}/VST3/${{ env.PROJECT_NAME }}.vst3" >> $GITHUB_ENV
+        echo "AU_PATH=${{ env.PROJECT_NAME }}_artefacts/${{ env.BUILD_TYPE }}/AU/${{ env.PROJECT_NAME }}.component" >> $GITHUB_ENV
+        echo "AUV3_PATH=${{ env.PROJECT_NAME }}_artefacts/${{ env.BUILD_TYPE }}/AUv3/${{ env.PROJECT_NAME }}.appex" >> $GITHUB_ENV
+        echo "PRODUCT_NAME=${{ env.PROJECT_NAME }}-$VERSION-${{ matrix.name }}" >> $GITHUB_ENV
+
+      # A cache compiler to speed up build times. https://github.com/ccache/ccache
+    - name: ccache
+      uses: hendrikmuhs/ccache-action@v1.2
+      with:
+        key: v2-${{ matrix.os }}-${{ matrix.type }}
+
+  # Need apple secrets, p12 stuff set up. Related to -name Codesign (macOs)
+  #  - name: Import Certificates (macOS)
+  #    uses: apple-actions/import-codesign-certs@v1
+  #    if: ${{ matrix.name == 'macOS' }}
+  #    with:
+  #      p12-file-base64: ${{ secrets.DEV_ID_APP_CERT }}
+  #      p12-password: ${{ secrets.DEV_ID_APP_PASSWORD }}
+
+    - name: Configure
+      shell: bash
+      run: cmake -B ${{ env.BUILD_DIR }} -G Ninja -DCMAKE_BUILD_TYPE=${{ env.BUILD_TYPE}} -DCMAKE_C_COMPILER_LAUNCHER=ccache -DCMAKE_CXX_COMPILER_LAUNCHER=ccache -DCMAKE_OSX_ARCHITECTURES="arm64;x86_64" .
+
+    - name: Build
+      shell: bash
+      run: cmake --build ${{ env.BUILD_DIR }} --config ${{ env.BUILD_TYPE }} --parallel 4
+
+    - name: Test
+      working-directory: ${{ env.BUILD_DIR }}
+      run: ctest --output-on-failure -j4
+
+  # For 7z command - brew install p7zip
+    - name: Pluginval
+      working-directory: ${{ env.BUILD_DIR }}
+      shell: bash
+      run: |
+        curl -LO "https://github.com/Tracktion/pluginval/releases/download/v1.0.1/pluginval_${{ matrix.name }}.zip"
+        7z x pluginval_${{ matrix.name }}.zip
+        ${{ matrix.pluginval-binary }} --strictness-level 10 --verbose --validate "${{ env.VST3_PATH }}"
+
+  # Need code signing stuff or will get error. Releated to -name Import Certificates (macOS)
+    #- name: Codesign (macOS)
+    #  working-directory: ${{ env.BUILD_DIR }}
+    #  if: ${{ matrix.name == 'macOS' }}
+    #  run: |
+        # Each plugin must be code signed
+    #    codesign --force -s "${{ secrets.DEVELOPER_ID_APPLICATION}}" -v ${{ env.VST3_PATH }} --deep --strict --options=runtime --timestamp
+    #    codesign --force -s "${{ secrets.DEVELOPER_ID_APPLICATION}}" -v ${{ env.AU_PATH }} --deep --strict --options=runtime --timestamp
+
+    # Must change out the icns filename
+    - name: Add Custom Icons (macOS)
+      if: ${{ matrix.name == 'macOS' }}
+      working-directory: ${{ env.BUILD_DIR }}
+      run: |
+        # add the icns as its own icon resource (meta!)
+        sips -i ../packaging/CI_CMake_Test.icns
+
+        # Grab the resource, put in tempfile
+        DeRez -only icns ../packaging/CI_CMake_Test.icns > /tmp/icons
+
+        # Stuff the resource into the strange Icon? file's resource fork
+        Rez -a /tmp/icons -o ${{ env.VST3_PATH }}/Icon$'\r'
+        Rez -a /tmp/icons -o ${{ env.AU_PATH }}/Icon$'\r'
+
+        # Set custom icon attribute
+        SetFile -a C ${{ env.VST3_PATH }}
+        SetFile -a C ${{ env.AU_PATH }}
+
+    # You'll need an account with NPM to install and use this. https://www.npmjs.com/signup (maybe add this to Install macOS Deps)
+      # touch ~/.zshrc
+      # curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash
+      # nvm install node --reinstall-packages-from=node
+      # nvm install-latest-npm
+      # ensure everything is connected properly in the packages folder. The Json and .iss file needs to be updated with correct project names
+    - name: Create DMG, Notarize and Staple (macOS)
+      if: ${{ matrix.name == 'macOS' }}
+      run: |
+        npm install -g appdmg
+        mkdir -p packaging/dmg
+
+      # Create directories for the dmg symlinks
+        sudo mkdir -m 755 -p /Library/Audio/Plug-Ins/Components && sudo mkdir -m 755 -p /Library/Audio/Plug-Ins/VST3 && sudo mkdir -m 755 -p ~/Desktop
+        ln -s /Library/Audio/Plug-Ins/Components "packaging/dmg/Your Mac's Component folder"
+        ln -s /Library/Audio/Plug-Ins/VST3 "packaging/dmg/Your Mac's VST3 folder"
+        ln -s ~/Desktop "packaging/dmg/Your Mac's Desktop folder"
+        mv "${{ env.ARTIFACTS_PATH }}/VST3/${{ env.PROJECT_NAME }}.vst3" packaging/dmg
+        mv "${{ env.ARTIFACTS_PATH }}/AU/${{ env.PROJECT_NAME }}.component" packaging/dmg
+        mv "${{ env.ARTIFACTS_PATH }}/Standalone/${{ env.PROJECT_NAME }}.app" packaging/dmg
+
+        # Run appdmg to create the .dmg
+        cd packaging && appdmg dmg.json ${{ env.PRODUCT_NAME}}.dmg
+        #codesign -s "${{ secrets.DEVELOPER_ID_APPLICATION}}" --timestamp -i com.jucetest.jucetest --force ${{ env.PRODUCT_NAME }}.dmg
+        #xcrun notarytool submit ${{ env.PRODUCT_NAME }}.dmg --apple-id ${{ secrets.NOTARIZATION_USERNAME }} --password ${{ secrets.NOTARIZATION_PASSWORD }} --team-id ${{ secrets.TEAM_ID }} --wait
+        #xcrun stapler staple ${{ env.PRODUCT_NAME }}.dmg
+
+    - name: Generate Installer and Sign with EV cert on Azure (Windows)
+      if: ${{ matrix.name == 'Windows' }}
+      shell: bash
+      run: |
+        iscc "packaging\installer.iss"
+        mv "packaging/Output/${{ env.PRODUCT_NAME }}.exe" "${{ env.ARTIFACTS_PATH }}/"
+        dotnet tool install --global AzureSignTool
+        AzureSignTool sign -kvu "${{ secrets.AZURE_KEY_VAULT_URI }}" -kvi "${{ secrets.AZURE_CLIENT_ID }}" -kvt "${{ secrets.AZURE_TENANT_ID }}" -kvs "${{ secrets.AZURE_CLIENT_SECRET }}" -kvc ${{ secrets.AZURE_CERT_NAME }} -tr http://timestamp.digicert.com -v "${{ env.ARTIFACTS_PATH }}/${{ env.PRODUCT_NAME }}.exe"
+
+    - name: Upload Exe (Windows)
+      if: ${{ matrix.name == 'Windows' }}
+      uses: actions/upload-artifact@v3
+      with:
+        name: ${{ env.PRODUCT_NAME }}.exe
+        path: '${{ env.ARTIFACTS_PATH }}/${{ env.PRODUCT_NAME }}.exe'
 
 
-      # Establish variables
-      - name: Setup Environment Variables
-        if: ${{ matrix.name == 'macOS' }}
-        shell: bash
-        run: |
-          VERSION=$(cat VERSION)
-          echo "ARTIFACTS_PATH=${{ env.BUILD_DIR }}/${{ env.PROJECT_NAME }}_artefacts/${{ env.BUILD_TYPE }}" >> $GITHUB_ENV
-          echo "VST3_PATH=${{ env.PROJECT_NAME }}_artefacts/${{ env.BUILD_TYPE }}/VST3/${{ env.PROJECT_NAME }}.vst3" >> $GITHUB_ENV
-          echo "AU_PATH=${{ env.PROJECT_NAME }}_artefacts/${{ env.BUILD_TYPE }}/AU/${{ env.PROJECT_NAME }}.component" >> $GITHUB_ENV
-          echo "AUV3_PATH=${{ env.PROJECT_NAME }}_artefacts/${{ env.BUILD_TYPE }}/AUv3/${{ env.PROJECT_NAME }}.appex" >> $GITHUB_ENV
-          echo "PRODUCT_NAME=${{ env.PROJECT_NAME }}-$VERSION-${{ matrix.name }}" >> $GITHUB_ENV
-
-        # A cache compiler to speed up build times. https://github.com/ccache/ccache
-      - name: ccache
-        uses: hendrikmuhs/ccache-action@v1.2
-        with:
-          key: v2-${{ matrix.os }}-${{ matrix.type }}
-
-    # Need apple secrets, p12 stuff set up. Related to -name Codesign (macOs)
-    #  - name: Import Certificates (macOS)
-    #    uses: apple-actions/import-codesign-certs@v1
-    #    if: ${{ matrix.name == 'macOS' }}
-    #    with:
-    #      p12-file-base64: ${{ secrets.DEV_ID_APP_CERT }}
-    #      p12-password: ${{ secrets.DEV_ID_APP_PASSWORD }}
-
-      - name: Configure
-        shell: bash
-        run: cmake -B ${{ env.BUILD_DIR }} -G Ninja -DCMAKE_BUILD_TYPE=${{ env.BUILD_TYPE}} -DCMAKE_C_COMPILER_LAUNCHER=ccache -DCMAKE_CXX_COMPILER_LAUNCHER=ccache -DCMAKE_OSX_ARCHITECTURES="arm64;x86_64" .
-
-      - name: Build
-        shell: bash
-        run: cmake --build ${{ env.BUILD_DIR }} --config ${{ env.BUILD_TYPE }} --parallel 4
-
-      - name: Test
-        working-directory: ${{ env.BUILD_DIR }}
-        run: ctest --output-on-failure -j4
-
-    # For 7z command - brew install p7zip
-      - name: Pluginval
-        working-directory: ${{ env.BUILD_DIR }}
-        shell: bash
-        run: |
-          curl -LO "https://github.com/Tracktion/pluginval/releases/download/v1.0.1/pluginval_${{ matrix.name }}.zip"
-          7z x pluginval_${{ matrix.name }}.zip
-          ${{ matrix.pluginval-binary }} --strictness-level 10 --verbose --validate "${{ env.VST3_PATH }}"
-
-    # Need code signing stuff or will get error. Releated to -name Import Certificates (macOS)
-      #- name: Codesign (macOS)
-      #  working-directory: ${{ env.BUILD_DIR }}
-      #  if: ${{ matrix.name == 'macOS' }}
-      #  run: |
-          # Each plugin must be code signed
-      #    codesign --force -s "${{ secrets.DEVELOPER_ID_APPLICATION}}" -v ${{ env.VST3_PATH }} --deep --strict --options=runtime --timestamp
-      #    codesign --force -s "${{ secrets.DEVELOPER_ID_APPLICATION}}" -v ${{ env.AU_PATH }} --deep --strict --options=runtime --timestamp
-
-      # Must change out the icns filename
-      - name: Add Custom Icons (macOS)
-        if: ${{ matrix.name == 'macOS' }}
-        working-directory: ${{ env.BUILD_DIR }}
-        run: |
-          # add the icns as its own icon resource (meta!)
-          sips -i ../packaging/CI_CMake_Test.icns
-
-          # Grab the resource, put in tempfile
-          DeRez -only icns ../packaging/CI_CMake_Test.icns > /tmp/icons
-
-          # Stuff the resource into the strange Icon? file's resource fork
-          Rez -a /tmp/icons -o ${{ env.VST3_PATH }}/Icon$'\r'
-          Rez -a /tmp/icons -o ${{ env.AU_PATH }}/Icon$'\r'
-
-          # Set custom icon attribute
-          SetFile -a C ${{ env.VST3_PATH }}
-          SetFile -a C ${{ env.AU_PATH }}
-
-      # You'll need an account with NPM to install and use this. https://www.npmjs.com/signup (maybe add this to Install macOS Deps)
-        # touch ~/.zshrc
-        # curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash
-        # nvm install node --reinstall-packages-from=node
-        # nvm install-latest-npm
-        # ensure everything is connected properly in the packages folder. The Json and .iss file needs to be updated with correct project names
-      - name: Create DMG, Notarize and Staple (macOS)
-        if: ${{ matrix.name == 'macOS' }}
-        run: |
-          npm install -g appdmg
-          mkdir -p packaging/dmg
-
-        # Create directories for the dmg symlinks
-          sudo mkdir -m 755 -p /Library/Audio/Plug-Ins/Components && sudo mkdir -m 755 -p /Library/Audio/Plug-Ins/VST3 && sudo mkdir -m 755 -p ~/Desktop
-          ln -s /Library/Audio/Plug-Ins/Components "packaging/dmg/Your Mac's Component folder"
-          ln -s /Library/Audio/Plug-Ins/VST3 "packaging/dmg/Your Mac's VST3 folder"
-          ln -s ~/Desktop "packaging/dmg/Your Mac's Desktop folder"
-          mv "${{ env.ARTIFACTS_PATH }}/VST3/${{ env.PROJECT_NAME }}.vst3" packaging/dmg
-          mv "${{ env.ARTIFACTS_PATH }}/AU/${{ env.PROJECT_NAME }}.component" packaging/dmg
-          mv "${{ env.ARTIFACTS_PATH }}/Standalone/${{ env.PROJECT_NAME }}.app" packaging/dmg
-
-          # Run appdmg to create the .dmg
-          cd packaging && appdmg dmg.json ${{ env.PRODUCT_NAME}}.dmg
-          #codesign -s "${{ secrets.DEVELOPER_ID_APPLICATION}}" --timestamp -i com.jucetest.jucetest --force ${{ env.PRODUCT_NAME }}.dmg
-          #xcrun notarytool submit ${{ env.PRODUCT_NAME }}.dmg --apple-id ${{ secrets.NOTARIZATION_USERNAME }} --password ${{ secrets.NOTARIZATION_PASSWORD }} --team-id ${{ secrets.TEAM_ID }} --wait
-          #xcrun stapler staple ${{ env.PRODUCT_NAME }}.dmg
-
-      - name: Generate Installer and Sign with EV cert on Azure (Windows)
-        if: ${{ matrix.name == 'Windows' }}
-        shell: bash
-        run: |
-          iscc "packaging\installer.iss"
-          mv "packaging/Output/${{ env.PRODUCT_NAME }}.exe" "${{ env.ARTIFACTS_PATH }}/"
-          dotnet tool install --global AzureSignTool
-          AzureSignTool sign -kvu "${{ secrets.AZURE_KEY_VAULT_URI }}" -kvi "${{ secrets.AZURE_CLIENT_ID }}" -kvt "${{ secrets.AZURE_TENANT_ID }}" -kvs "${{ secrets.AZURE_CLIENT_SECRET }}" -kvc ${{ secrets.AZURE_CERT_NAME }} -tr http://timestamp.digicert.com -v "${{ env.ARTIFACTS_PATH }}/${{ env.PRODUCT_NAME }}.exe"
-
-      - name: Upload Exe (Windows)
-        if: ${{ matrix.name == 'Windows' }}
-        uses: actions/upload-artifact@v3
-        with:
-          name: ${{ env.PRODUCT_NAME }}.exe
-          path: '${{ env.ARTIFACTS_PATH }}/${{ env.PRODUCT_NAME }}.exe'
-
-
-      - name: Upload DMG (MacOS)
-        if: ${{ matrix.name == 'macOS' }}
-        uses: actions/upload-artifact@v3
-        with:
-          name: ${{ env.PRODUCT_NAME }}.dmg
-          path: packaging/${{ env.PRODUCT_NAME }}.dmg
+    - name: Upload DMG (MacOS)
+      if: ${{ matrix.name == 'macOS' }}
+      uses: actions/upload-artifact@v3
+      with:
+        name: ${{ env.PRODUCT_NAME }}.dmg
+        path: packaging/${{ env.PRODUCT_NAME }}.dmg
