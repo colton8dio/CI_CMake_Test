@@ -50,21 +50,6 @@ jobs:
         brew install ninja osxutils
         brew install p7zip
 
-      # Fixing windows bash path
-    - name:  add-path
-      if: ${{ matrix.name == 'Windows' }}
-      shell: cmd
-      run: |
-        echo ::add-path::C:\msys64\usr\bin
-        dir C:\msys64\usr\bin
-
-    - name:  shell
-      if: ${{ matrix.name == 'Windows' }}
-      shell: bash
-      run: |
-        openssl version -d
-        pwd
-
       # Grabs JUCE git (idk how checkouts work)
     - name: Checkout code
       uses: actions/checkout@v3
