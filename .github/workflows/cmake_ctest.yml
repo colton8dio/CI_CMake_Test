@@ -85,6 +85,9 @@ jobs:
       uses: hendrikmuhs/ccache-action@v1.2
       with:
         key: v2-${{ matrix.os }}-${{ matrix.type }}
+        if: ${{ matrix.name == 'Windows' }}
+        path : |
+          "C:\Users\Colton Dodd\actions-runner\actions-runner\_work\CI_CMake_Test\CI_CMake_Test/.ccache"
 
   # Need apple secrets, p12 stuff set up. Related to -name Codesign (macOs)
   #  - name: Import Certificates (macOS)
