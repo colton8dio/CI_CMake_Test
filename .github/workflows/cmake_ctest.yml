@@ -58,7 +58,8 @@ jobs:
 
     - name: TEST
       shell: bash
-      run: echo 'Hello World'
+      run: |
+        echo 'Hello World'
 
     # Establish variables
     - name: Setup Environment Variables on Windows
