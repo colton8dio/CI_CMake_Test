@@ -109,11 +109,11 @@ jobs:
 
     - name: Build
       if: ${{ matrix.name == 'macOS' }}
-        shell: bash
-        run: cmake --build ${{ env.BUILD_DIR }} --config ${{ env.BUILD_TYPE }} --parallel 4
+      shell: bash
+      run: cmake --build ${{ env.BUILD_DIR }} --config ${{ env.BUILD_TYPE }} --parallel 4
       if: ${{ matrix.name == 'Windows' }}
-        shell: pwsh
-        run: cmake --build ${{ env.BUILD_DIR }} --config ${{ env.BUILD_TYPE }} --parallel 4
+      shell: pwsh
+      run: cmake --build ${{ env.BUILD_DIR }} --config ${{ env.BUILD_TYPE }} --parallel 4
 
     - name: Test
       working-directory: ${{ env.BUILD_DIR }}
