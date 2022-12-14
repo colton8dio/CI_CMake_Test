@@ -90,17 +90,17 @@ jobs:
 
       # Getting Ccache on Windows
     - name: Prepare ccache timestamp
-        if: ${{ matrix.name == 'Windows' }}
-        id: ccache_cache_timestamp
-        shell: cmake -P {0}
-        run: |
+      if: ${{ matrix.name == 'Windows' }}
+      id: ccache_cache_timestamp
+      shell: cmake -P {0}
+      run: |
         string(TIMESTAMP current_date "%Y-%m-%d-%H;%M;%S" UTC)
         message("::set-output name=timestamp::${current_date}")
 
     - name: ccache cache files
-        if: ${{ matrix.name == 'Windows' }}
-        uses: actions/cache@v1.1.0
-        with:
+      if: ${{ matrix.name == 'Windows' }}
+      uses: actions/cache@v1.1.0
+      with:
         path: .ccache
         key: ${ { matrix.config.name } }-ccache-${ { steps.ccache_cache_timestamp.outputs.timestamp } }
         restore-keys: |
