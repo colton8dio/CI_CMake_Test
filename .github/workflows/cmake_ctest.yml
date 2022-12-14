@@ -58,7 +58,7 @@ jobs:
 
     - name: TEST
       shell: bash
-      run: echo "ARTIFACTS_PATH=${{ env.BUILD_DIR }}/${{ env.PROJECT_NAME }}_artefacts/${{ env.BUILD_TYPE }}" >> $GITHUB_ENV
+      run: pwd
 
     # Establish variables
     - name: Setup Environment Variables on Windows
