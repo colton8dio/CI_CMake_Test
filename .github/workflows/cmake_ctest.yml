@@ -88,24 +88,6 @@ jobs:
         key: v2-${{ matrix.os }}-${{ matrix.type }}
 
 
-      # Getting Ccache on Windows
-    - name: Prepare ccache timestamp
-      if: ${{ matrix.name == 'Windows' }}
-      id: ccache_cache_timestamp
-      shell: cmake -P {0}
-      run: |
-        string(TIMESTAMP current_date "%Y-%m-%d-%H;%M;%S" UTC)
-        message("::set-output name=timestamp::${current_date}")
-
-    - name: ccache cache files
-      if: ${{ matrix.name == 'Windows' }}
-      uses: actions/cache@v1.1.0
-      with:
-        path: .ccache
-        key: ${ { matrix.config.name } }-ccache-${ { steps.ccache_cache_timestamp.outputs.timestamp } }
-        restore-keys: |
-            ${ { matrix.config.name } }-ccache-
-
   # Need apple secrets, p12 stuff set up. Related to -name Codesign (macOs)
   #  - name: Import Certificates (macOS)
   #    uses: apple-actions/import-codesign-certs@v1
@@ -114,9 +96,16 @@ jobs:
   #      p12-file-base64: ${{ secrets.DEV_ID_APP_CERT }}
   #      p12-password: ${{ secrets.DEV_ID_APP_PASSWORD }}
 
-    - name: Configure
+    - name: Configure on MacOS
+      if: ${{ matrix.name == 'macOS' }}
       shell: bash
       run: cmake -B ${{ env.BUILD_DIR }} -G Ninja -DCMAKE_BUILD_TYPE=${{ env.BUILD_TYPE}} -DCMAKE_C_COMPILER_LAUNCHER=ccache -DCMAKE_CXX_COMPILER_LAUNCHER=ccache -DCMAKE_OSX_ARCHITECTURES="arm64;x86_64" .
+
+    - name: Configure on Windows
+      if: ${{ matrix.name == 'Windows' }}
+      shell: bash
+      run: cmake -B ${{ env.BUILD_DIR }} -G Ninja -DCMAKE_BUILD_TYPE=${{ env.BUILD_TYPE}} .
+
 
     - name: Build
       shell: bash
