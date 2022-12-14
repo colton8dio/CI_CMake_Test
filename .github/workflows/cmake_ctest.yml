@@ -103,7 +103,7 @@ jobs:
 
     - name: Configure on Windows
       if: ${{ matrix.name == 'Windows' }}
-      shell: bash
+      shell: pwsh
       run: cmake -B ${{ env.BUILD_DIR }} -G Ninja -DCMAKE_BUILD_TYPE=${{ env.BUILD_TYPE}} .
 
 
