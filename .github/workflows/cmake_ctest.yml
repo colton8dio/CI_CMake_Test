@@ -56,9 +56,21 @@ jobs:
       with:
         submodules: true # Gotta get JUCE populated
 
-
+    # Establish variables
+    - name: Setup Environment Variables on windows
+      if: ${{ matrix.name == 'Windows' }}
+      shell: pwsh
+      run: |
+        "mypath" >> $env:GITHUB_PATH
+        $VERSION = cat VERSION
+        "ARTIFACTS_PATH=${{ env.BUILD_DIR }}/${{ env.PROJECT_NAME }}_artefacts/${{ env.BUILD_TYPE }}" >> $env.$GITHUB_ENV
+        "VST3_PATH=${{ env.PROJECT_NAME }}_artefacts/${{ env.BUILD_TYPE }}/VST3/${{ env.PROJECT_NAME }}.vst3" >> $env.$GITHUB_ENV
+        "AU_PATH=${{ env.PROJECT_NAME }}_artefacts/${{ env.BUILD_TYPE }}/AU/${{ env.PROJECT_NAME }}.component" >> $env.$GITHUB_ENV
+        "AUV3_PATH=${{ env.PROJECT_NAME }}_artefacts/${{ env.BUILD_TYPE }}/AUv3/${{ env.PROJECT_NAME }}.appex" >> $env.$GITHUB_ENV
+        "PRODUCT_NAME=${{ env.PROJECT_NAME }}-$VERSION-${{ matrix.name }}" >> $env.$GITHUB_ENV
 
     - name: Setup Environment Variables on macOS
+      if: ${{ matrix.name == 'macOS' }}
       shell: bash
       run: |
         VERSION=$(cat VERSION)
@@ -71,8 +83,19 @@ jobs:
       # A cache compiler to speed up build times. https://github.com/ccache/ccache
     - name: ccache
       uses: hendrikmuhs/ccache-action@v1.2
+      if: ${{ matrix.name == 'macOS' }}
       with:
         key: v2-${{ matrix.os }}-${{ matrix.type }}
+
+
+  # Getting Ccache on Windows
+    - name: Download ccache (Windows)
+    id: ccache
+    shell: cmake -P {0}
+    run: |
+      set(ccache_url "https://github.com/cristianadam/ccache/releases/download/v$ENV{CCACHE_VERSION}/${ { runner.os } }.tar.xz")
+      file(DOWNLOAD "${ccache_url}" ./ccache.tar.xz SHOW_PROGRESS)
+      execute_process(COMMAND ${CMAKE_COMMAND} -E tar xvf ./ccache.tar.xz)
 
   # Need apple secrets, p12 stuff set up. Related to -name Codesign (macOs)
   #  - name: Import Certificates (macOS)
