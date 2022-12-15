@@ -68,7 +68,7 @@ jobs:
         echo "PRODUCT_NAME=${{ env.PROJECT_NAME }}-$VERSION-${{ matrix.name }}" >> $GITHUB_ENV
 
       # A cache compiler to speed up build times. https://github.com/ccache/ccache
-    - name: ccache (MacOS)
+    - name: ccache
       uses: hendrikmuhs/ccache-action@v1.2
       with:
         key: v2-${{ matrix.os }}-${{ matrix.type }}
@@ -90,7 +90,7 @@ jobs:
     - name: Configure (Windows)
       if: ${{ matrix.name == 'Windows' }}
       shell: pwsh
-      run: cmake -B ${{ env.BUILD_DIR }} -DCMAKE_BUILD_TYPE=${{ env.BUILD_TYPE}} .
+      run: cmake -B ${{ env.BUILD_DIR }} -DCMAKE_BUILD_TYPE=${{ env.BUILD_TYPE}} -DCMAKE_C_COMPILER_LAUNCHER=ccache -DCMAKE_CXX_COMPILER_LAUNCHER=ccache .
 
 
     - name: Build (MacOS)
