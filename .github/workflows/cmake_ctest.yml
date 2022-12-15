@@ -87,11 +87,11 @@ jobs:
       shell: bash
       run: cmake -B ${{ env.BUILD_DIR }} -G Ninja -DCMAKE_BUILD_TYPE=${{ env.BUILD_TYPE}} -DCMAKE_C_COMPILER_LAUNCHER=ccache -DCMAKE_CXX_COMPILER_LAUNCHER=ccache -DCMAKE_OSX_ARCHITECTURES="arm64;x86_64" .
 
-      #ninja has issues
+      #ninja has issues with pluginval and/or running in powersehll. We're sacrifcing speed for plugin validation.
     - name: Configure (Windows)
       if: ${{ matrix.name == 'Windows' }}
       shell: pwsh
-      run: cmake -B ${{ env.BUILD_DIR }} -G Ninja -DCMAKE_BUILD_TYPE=${{ env.BUILD_TYPE}} -DCMAKE_C_COMPILER_LAUNCHER=ccache -DCMAKE_CXX_COMPILER_LAUNCHER=ccache .
+      run: cmake -B ${{ env.BUILD_DIR }}  -DCMAKE_BUILD_TYPE=${{ env.BUILD_TYPE}} -DCMAKE_C_COMPILER_LAUNCHER=ccache -DCMAKE_CXX_COMPILER_LAUNCHER=ccache .
 
 
     - name: Build (MacOS)
