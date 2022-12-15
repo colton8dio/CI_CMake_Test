@@ -91,7 +91,7 @@ jobs:
     - name: Configure (Windows)
       if: ${{ matrix.name == 'Windows' }}
       shell: pwsh
-      run: cmake -B ${{ env.BUILD_DIR }} -G Ninja -DCMAKE_BUILD_TYPE=${{ env.BUILD_TYPE}} -DCMAKE_C_COMPILER_LAUNCHER=ccache -DCMAKE_CXX_COMPILER_LAUNCHER=ccache -DCMAKE_CXX_COMPILER='C:\ProgramData\chocolatey\bin\ninja.exe' .
+      run: cmake -B ${{ env.BUILD_DIR }} -G Ninja -DCMAKE_BUILD_TYPE=${{ env.BUILD_TYPE}} -DCMAKE_C_COMPILER_LAUNCHER=ccache -DCMAKE_CXX_COMPILER_LAUNCHER=ccache -DCMAKE_CXX_COMPILER=C:\ProgramData\chocolatey\bin\ninja.exe .
 
 
     - name: Build (MacOS)
