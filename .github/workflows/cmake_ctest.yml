@@ -42,6 +42,7 @@ jobs:
 
 
     steps:
+      # Might be able to just delete this step since we're locally hosted and this is already installed.
       # Add pluginval brew here?
       # ninja is a build system for CMake for faster builds https://ninja-build.org
     - name: Install macOS Deps
@@ -56,20 +57,7 @@ jobs:
       with:
         submodules: true # Gotta get JUCE populated
 
-    # Establish variables
-    - name: Setup Environment Variables on Windows
-      if: ${{ matrix.name == 'linux' }}
-      shell: pwsh
-      run: |
-        "mypath" >> $env:GITHUB_PATH
-        $VERSION = cat VERSION
-        "ARTIFACTS_PATH=${{ env.BUILD_DIR }}/${{ env.PROJECT_NAME }}_artefacts/${{ env.BUILD_TYPE }}" >> $env.$GITHUB_ENV
-        "VST3_PATH=${{ env.PROJECT_NAME }}_artefacts/${{ env.BUILD_TYPE }}/VST3/${{ env.PROJECT_NAME }}.vst3" >> $env.$GITHUB_ENV
-        "AU_PATH=${{ env.PROJECT_NAME }}_artefacts/${{ env.BUILD_TYPE }}/AU/${{ env.PROJECT_NAME }}.component" >> $env.$GITHUB_ENV
-        "AUV3_PATH=${{ env.PROJECT_NAME }}_artefacts/${{ env.BUILD_TYPE }}/AUv3/${{ env.PROJECT_NAME }}.appex" >> $env.$GITHUB_ENV
-        "PRODUCT_NAME=${{ env.PROJECT_NAME }}-$VERSION-${{ matrix.name }}" >> $env.$GITHUB_ENV
-
-    - name: Setup Environment Variables on macOS
+    - name: Setup Environment Variables
       shell: bash
       run: |
         VERSION=$(cat VERSION)
@@ -80,9 +68,8 @@ jobs:
         echo "PRODUCT_NAME=${{ env.PROJECT_NAME }}-$VERSION-${{ matrix.name }}" >> $GITHUB_ENV
 
       # A cache compiler to speed up build times. https://github.com/ccache/ccache
-    - name: ccache on MacOS
+    - name: ccache (MacOS)
       uses: hendrikmuhs/ccache-action@v1.2
-      if: ${{ matrix.name == 'macOS' }}
       with:
         key: v2-${{ matrix.os }}-${{ matrix.type }}
 
@@ -95,23 +82,23 @@ jobs:
   #      p12-file-base64: ${{ secrets.DEV_ID_APP_CERT }}
   #      p12-password: ${{ secrets.DEV_ID_APP_PASSWORD }}
 
-    - name: Configure on MacOS
+    - name: Configure (MacOS)
       if: ${{ matrix.name == 'macOS' }}
       shell: bash
       run: cmake -B ${{ env.BUILD_DIR }} -G Ninja -DCMAKE_BUILD_TYPE=${{ env.BUILD_TYPE}} -DCMAKE_C_COMPILER_LAUNCHER=ccache -DCMAKE_CXX_COMPILER_LAUNCHER=ccache -DCMAKE_OSX_ARCHITECTURES="arm64;x86_64" .
 
-    - name: Configure on Windows
+    - name: Configure (Windows)
       if: ${{ matrix.name == 'Windows' }}
       shell: pwsh
       run: cmake -B ${{ env.BUILD_DIR }} -DCMAKE_BUILD_TYPE=${{ env.BUILD_TYPE}} .
 
 
-    - name: Build on MacOS
+    - name: Build (MacOS)
       if: ${{ matrix.name == 'macOS' }}
       shell: bash
       run: cmake --build ${{ env.BUILD_DIR }} --config ${{ env.BUILD_TYPE }} --parallel 4
 
-    - name: Build on Windows
+    - name: Build (Windows)
       if: ${{ matrix.name == 'Windows' }}
       shell: pwsh
       run: cmake --build ${{ env.BUILD_DIR }} --config ${{ env.BUILD_TYPE }} --parallel 4
