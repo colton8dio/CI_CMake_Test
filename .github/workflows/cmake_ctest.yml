@@ -56,13 +56,9 @@ jobs:
       with:
         submodules: true # Gotta get JUCE populated
 
-    - name: TEST
-      shell: bash
-      run: pwd
-
     # Establish variables
     - name: Setup Environment Variables on Windows
-      if: ${{ matrix.name == 'Windows' }}
+      if: ${{ matrix.name == 'linux' }}
       shell: pwsh
       run: |
         "mypath" >> $env:GITHUB_PATH
@@ -74,7 +70,6 @@ jobs:
         "PRODUCT_NAME=${{ env.PROJECT_NAME }}-$VERSION-${{ matrix.name }}" >> $env.$GITHUB_ENV
 
     - name: Setup Environment Variables on macOS
-      if: ${{ matrix.name == 'macOS' }}
       shell: bash
       run: |
         VERSION=$(cat VERSION)
