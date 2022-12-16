@@ -31,7 +31,7 @@ InfoBeforeFile=README.rtf
 ; Uncomment the following lines to run in non administrative install mode (install for current user only.)
 ;PrivilegesRequired=lowest
 ;PrivilegesRequiredOverridesAllowed=dialog
-OutputBaseFilename=CI_CMake_Test_setup
+OutputBaseFilename=CI_CMake_Test-{#Version}-Windows
 Compression=lzma
 SolidCompression=yes
 WizardStyle=modern
@@ -39,6 +39,7 @@ UsePreviousAppDir=yes
 UninstallFilesDir="{code:GetDir|0}"
 
 [Files]
+Source: C:\Users\Colton.DESKTOP-L3D8I91\actions-runner\_work\CI_CMake_Test\CI_CMake_Test\Builds\CI_CMake_Test_artefacts\Release\VST3\CI_CMake_Test.vst3\Contents\x86-win\CI_CMake_Test.vst3; DestDir: "{autocf}\VST3"; Flags: ignoreversion
 Source: C:\Users\Colton.DESKTOP-L3D8I91\actions-runner\_work\CI_CMake_Test\CI_CMake_Test\Builds\CI_CMake_Test_artefacts\Release\Standalone\CI_CMake_Test.exe; DestDir: "{code:GetDir|0}"; Flags: ignoreversion
 
 [Code]
