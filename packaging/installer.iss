@@ -31,7 +31,7 @@ InfoBeforeFile=README.rtf
 ; Uncomment the following lines to run in non administrative install mode (install for current user only.)
 ;PrivilegesRequired=lowest
 ;PrivilegesRequiredOverridesAllowed=dialog
-OutputBaseFilename=CI_CMake_Test-{#Version}-Windows
+OutputBaseFilename=CI_CMake_Test-{#MyAppVersion}-Windows
 Compression=lzma
 SolidCompression=yes
 WizardStyle=modern
