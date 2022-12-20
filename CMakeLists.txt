@@ -40,13 +40,14 @@ option(JUCE_ENABLE_MODULE_SOURCE_GROUPS "Show all module sources in IDE projects
 # On Github Actions, it's managed by actions/checkout
 add_subdirectory(JUCE)
 
+#juce_set_aax_sdk_path(<absolute path>)     #Define the absolute path to the SDKS for VST and AAX
+juce_set_vst2_sdk_path(/Users/ColtonDodd/SDKs/VST2_SDK)
+
 # Check the readme at `docs/CMake API.md` in the JUCE repo for full config
 juce_add_plugin("${PROJECT_NAME}"
     # VERSION ...                               # Set this if the plugin version is different to the project version
     # ICON_BIG ...                              # ICON_* arguments specify a path to an image file to use as an icon for the Standalone
     ICON_SMALL packaging/icon.png
-    #juce_set_aax_sdk_path(<absolute path>)     #Define the absolute path to the SDKS for VST and AAX
-    juce_set_vst2_sdk_path(/Users/ColtonDodd/SDKs/VST2_SDK)
     COMPANY_NAME JUCE
     BUNDLE_ID com.jucetest.jucetest
     IS_SYNTH TRUE                               # Is this a synth or an effect?
