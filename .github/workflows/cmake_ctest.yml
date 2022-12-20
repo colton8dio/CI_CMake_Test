@@ -127,13 +127,14 @@ jobs:
         ${{ matrix.pluginval-binary }} --strictness-level 10 --verbose --validate "${{ env.AU_PATH }}"
 
   # Need code signing stuff or will get error. Releated to -name Import Certificates (macOS)
-    #- name: Codesign (macOS)
-    #  working-directory: ${{ env.BUILD_DIR }}
-    #  if: ${{ matrix.name == 'macOS' }}
-    #  run: |
+    - name: Codesign (macOS)
+      working-directory: ${{ env.BUILD_DIR }}
+      if: ${{ matrix.name == 'macOS' }}
+      run: |
         # Each plugin must be code signed
-    #    codesign --force -s "${{ secrets.DEVELOPER_ID_APPLICATION}}" -v ${{ env.VST3_PATH }} --deep --strict --options=runtime --timestamp
-    #    codesign --force -s "${{ secrets.DEVELOPER_ID_APPLICATION}}" -v ${{ env.AU_PATH }} --deep --strict --options=runtime --timestamp
+        codesign --force -s "${{ secrets.DEVELOPER_ID_APPLICATION}}" -v ${{ env.VST3_PATH }} --deep --strict --options=runtime --timestamp
+        codesign --force -s "${{ secrets.DEVELOPER_ID_APPLICATION}}" -v ${{ env.VST_PATH }} --deep --strict --options=runtime --timestamp
+        codesign --force -s "${{ secrets.DEVELOPER_ID_APPLICATION}}" -v ${{ env.AU_PATH }} --deep --strict --options=runtime --timestamp
 
     # Must change out the icns filename
     - name: Add Custom Icons (macOS)
