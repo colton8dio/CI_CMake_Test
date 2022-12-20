@@ -7,8 +7,12 @@ cmake_minimum_required(VERSION 3.21)
 set(PROJECT_NAME "CI_CMake_Test")
 
 # Set the plugin formats you'll be building here.
-# Valid formats: AAX Unity VST AU AUv3 Standalone
-set(FORMATS AU VST3 Standalone)
+# Valid formats: AAX Unity VST AU AUv3 Standalone (VST2 = VST)
+set(FORMATS AU VST3 VST Standalone)
+
+#Define the absolute path to the SDKS for VST and AAX
+#juce_set_aax_sdk_path(<absolute path>)
+juce_set_vst2_sdk_path(/Users/ColtonDodd/SDKs/VST2_SDK)
 
 # Reads in VERSION file and sticks in it CURRENT_VERSION variable
 # Be sure the file has no newlines
@@ -50,9 +54,8 @@ juce_add_plugin("${PROJECT_NAME}"
     IS_SYNTH TRUE                               # Is this a synth or an effect?
     NEEDS_MIDI_INPUT TRUE                       # Does the plugin need midi input?
     NEEDS_MIDI_OUTPUT TRUE                      # Does the plugin need midi output?
-    # IS_MIDI_EFFECT TRUE/FALSE                 # Is this plugin a MIDI effect?
     EDITOR_WANTS_KEYBOARD_FOCUS TRUE            # Does the editor need keyboard focus?
-    COPY_PLUGIN_AFTER_BUILD TRUE # On MacOS, plugin will be copied to /Users/you/Library/Audio/Plug-Ins/
+    COPY_PLUGIN_AFTER_BUILD TRUE                # On MacOS, plugin will be copied to /Users/you/Library/Audio/Plug-Ins/
     PLUGIN_MANUFACTURER_CODE Jucetest           # This has to be one uppercase, rest lower for AU formats
     PLUGIN_CODE J001                            # A unique four-character plugin id with at least one upper-case character
     FORMATS "${FORMATS}"
