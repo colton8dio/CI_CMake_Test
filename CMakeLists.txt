@@ -10,10 +10,6 @@ set(PROJECT_NAME "CI_CMake_Test")
 # Valid formats: AAX Unity VST AU AUv3 Standalone (VST2 = VST)
 set(FORMATS AU VST3 VST Standalone)
 
-#Define the absolute path to the SDKS for VST and AAX
-#juce_set_aax_sdk_path(<absolute path>)
-juce_set_vst2_sdk_path(/Users/ColtonDodd/SDKs/VST2_SDK)
-
 # Reads in VERSION file and sticks in it CURRENT_VERSION variable
 # Be sure the file has no newlines
 file(STRINGS VERSION CURRENT_VERSION)
@@ -60,6 +56,8 @@ juce_add_plugin("${PROJECT_NAME}"
     PLUGIN_CODE J001                            # A unique four-character plugin id with at least one upper-case character
     FORMATS "${FORMATS}"
     PRODUCT_NAME "${PROJECT_NAME}"
+    #juce_set_aax_sdk_path(<absolute path>)     #Define the absolute path to the SDKS for VST and AAX
+    juce_set_vst2_sdk_path(/Users/ColtonDodd/SDKs/VST2_SDK)
     )                                           # The name of the final executable, which can differ from the target name
 
 
