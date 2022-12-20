@@ -24,6 +24,9 @@ env:
 # all steps run in series
 jobs:
   build_and_test:
+    env:
+      # Unique keychain name so concurrent jobs don't get confused
+      KEYCHAIN: job-${{ github.job }}-${{ github.run_id	}}-${{ github.run_number }}-${{ github.run_attempt }}
     name: ${{ matrix.name }}
     runs-on: ${{ matrix.runner }}
     strategy:
