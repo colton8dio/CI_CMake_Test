@@ -41,7 +41,7 @@ option(JUCE_ENABLE_MODULE_SOURCE_GROUPS "Show all module sources in IDE projects
 add_subdirectory(JUCE)
 
 #juce_set_aax_sdk_path(<absolute path>)     #Define the absolute path to the SDKS for VST and AAX
-juce_set_vst2_sdk_path(/Users/ColtonDodd/SDKs/VST2_SDK)
+juce_set_vst2_sdk_path(${CMAKE_CURRENT_SOURCE_DIR}/SDKs/VST2_SDK)
 
 # Check the readme at `docs/CMake API.md` in the JUCE repo for full config
 juce_add_plugin("${PROJECT_NAME}"
