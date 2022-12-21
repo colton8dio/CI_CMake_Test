@@ -8,7 +8,7 @@ set(PROJECT_NAME "CI_CMake_Test")
 
 # Set the plugin formats you'll be building here.
 # Valid formats: AAX Unity VST AU AUv3 Standalone (VST2 = VST)
-set(FORMATS AU VST3 VST Standalone)
+set(FORMATS AU AAX VST3 VST Standalone)
 
 # Reads in VERSION file and sticks in it CURRENT_VERSION variable
 # Be sure the file has no newlines
@@ -40,7 +40,7 @@ option(JUCE_ENABLE_MODULE_SOURCE_GROUPS "Show all module sources in IDE projects
 # On Github Actions, it's managed by actions/checkout
 add_subdirectory(JUCE)
 
-#juce_set_aax_sdk_path(<absolute path>)     #Define the absolute path to the SDKS for VST and AAX
+juce_set_aax_sdk_path(${CMAKE_CURRENT_SOURCE_DIR}/SDKs/AAX_SDK)     #Define the absolute path to the SDKS for VST and AAX
 juce_set_vst2_sdk_path(${CMAKE_CURRENT_SOURCE_DIR}/SDKs/VST2_SDK)
 
 # Check the readme at `docs/CMake API.md` in the JUCE repo for full config
