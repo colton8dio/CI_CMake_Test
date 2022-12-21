@@ -1,0 +1,4 @@
+<map id="AAX_CParameterManager::GetParameterByID" name="AAX_CParameterManager::GetParameterByID">
+<area shape="rect" id="node1" title="Given a parameter ID, retrieves a reference to the requested parameter." alt="" coords="284,5,460,47"/>
+<area shape="rect" id="node2" href="$a02261.html#a9ef4fd6fa467008fcea4455d19c08009" title="Updates a single parameter&#39;s state to its current value." alt="" coords="5,5,236,47"/>
+</map>

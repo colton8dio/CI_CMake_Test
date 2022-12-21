@@ -1,0 +1,6 @@
+<map id="AAX_CParameter&lt; T &gt;" name="AAX_CParameter&lt; T &gt;">
+<area shape="rect" id="node1" title="Generic implementation of an AAX_IParameter." alt="" coords="159,95,318,121"/>
+<area shape="rect" id="node2" href="$a02145.html" title="The base interface for all normalizable plug&#45;in parameters." alt="" coords="5,5,125,32"/>
+<area shape="rect" id="node3" href="$a01857.html" title="Helper class to store a collection of name abbreviations." alt="" coords="149,5,328,32"/>
+<area shape="rect" id="node4" href="$a02061.html" title="Interface allowing an AAX plug&#45;in to interact with the host&#39;s event system." alt="" coords="352,5,531,32"/>
+</map>

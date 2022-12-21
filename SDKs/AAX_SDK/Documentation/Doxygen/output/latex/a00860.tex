@@ -1,0 +1,87 @@
+\hypertarget{a00860}{}\doxysection{AAX Interfaces}
+\label{a00860}\index{AAX Interfaces@{AAX Interfaces}}
+Full list of AAX interfaces. 
+
+\hypertarget{aax_host_implementation}{}\doxysubsubsection{Interfaces Implemented by the AAX Host}\label{aax_host_implementation}
+These interfaces are implemented by the AAX Host. References to the host-\/managed objects are provided to the plug-\/in through accessor methods, most commonly \mbox{\hyperlink{a01689_a8b7f0ae9c78d007ca76aa462ebe53135}{IACFUnknown\+::\+Query\+Interface()}}.
+
+
+\begin{DoxyRefList}
+\item[Class \mbox{\hyperlink{a02061}{AAX\+\_\+\+IAutomation\+Delegate}} ]\label{a00860__aax_host_implementation000001}%
+\Hypertarget{a00860__aax_host_implementation000001}%
+ 
+\item[Class \mbox{\hyperlink{a02065}{AAX\+\_\+\+ICollection}} ]\label{a00860__aax_host_implementation000002}%
+\Hypertarget{a00860__aax_host_implementation000002}%
+ 
+\item[Class \mbox{\hyperlink{a02069}{AAX\+\_\+\+IComponent\+Descriptor}} ]\label{a00860__aax_host_implementation000003}%
+\Hypertarget{a00860__aax_host_implementation000003}%
+ 
+\item[Class \mbox{\hyperlink{a02077}{AAX\+\_\+\+IController}} ]\label{a00860__aax_host_implementation000004}%
+\Hypertarget{a00860__aax_host_implementation000004}%
+  
+\item[Class \mbox{\hyperlink{a02097}{AAX\+\_\+\+IDma}} ]\label{a00860__aax_host_implementation000005}%
+\Hypertarget{a00860__aax_host_implementation000005}%
+ 
+\item[Class \mbox{\hyperlink{a02101}{AAX\+\_\+\+IEffect\+Descriptor}} ]\label{a00860__aax_host_implementation000006}%
+\Hypertarget{a00860__aax_host_implementation000006}%
+ 
+\item[Class \mbox{\hyperlink{a02125}{AAX\+\_\+\+IHost\+Processor\+Delegate}} ]\label{a00860__aax_host_implementation000007}%
+\Hypertarget{a00860__aax_host_implementation000007}%
+ 
+\item[Class \mbox{\hyperlink{a02129}{AAX\+\_\+\+IHost\+Services}} ]\label{a00860__aax_host_implementation000008}%
+\Hypertarget{a00860__aax_host_implementation000008}%
+ 
+\item[Class \mbox{\hyperlink{a02133}{AAX\+\_\+\+IMIDINode}} ]\label{a00860__aax_host_implementation000009}%
+\Hypertarget{a00860__aax_host_implementation000009}%
+ 
+\item[Class \mbox{\hyperlink{a02153}{AAX\+\_\+\+IPrivate\+Data\+Access}} ]\label{a00860__aax_host_implementation000010}%
+\Hypertarget{a00860__aax_host_implementation000010}%
+ 
+\item[Class \mbox{\hyperlink{a02157}{AAX\+\_\+\+IProperty\+Map}} ]\label{a00860__aax_host_implementation000011}%
+\Hypertarget{a00860__aax_host_implementation000011}%
+ 
+\item[Class \mbox{\hyperlink{a02173}{AAX\+\_\+\+ITransport}} ]\label{a00860__aax_host_implementation000012}%
+\Hypertarget{a00860__aax_host_implementation000012}%
+ 
+\item[Class \mbox{\hyperlink{a02177}{AAX\+\_\+\+IView\+Container}} ]\label{a00860__aax_host_implementation000013}%
+\Hypertarget{a00860__aax_host_implementation000013}%
+
+\end{DoxyRefList}\hypertarget{aax_plugin_implementation}{}\doxysubsubsection{Interfaces Implemented by the AAX Plug-\/\+In}\label{aax_plugin_implementation}
+These interfaces must be implemented by the AAX plug-\/in. Default implementations are provided in the AAX Library via the {\ttfamily AAX\+\_\+C} classes. Plug-\/in classes may inherit from the {\ttfamily AAX\+\_\+C} classes to override the default behavior.
+
+
+\begin{DoxyRefList}
+\item[Class \mbox{\hyperlink{a02105}{AAX\+\_\+\+IEffect\+Direct\+Data}} ]\label{a00860__aax_plugin_implementation000001}%
+\Hypertarget{a00860__aax_plugin_implementation000001}%
+ 
+\item[Class \mbox{\hyperlink{a02109}{AAX\+\_\+\+IEffect\+GUI}} ]\label{a00860__aax_plugin_implementation000002}%
+\Hypertarget{a00860__aax_plugin_implementation000002}%
+ 
+\item[Class \mbox{\hyperlink{a02113}{AAX\+\_\+\+IEffect\+Parameters}} ]\label{a00860__aax_plugin_implementation000003}%
+\Hypertarget{a00860__aax_plugin_implementation000003}%
+ 
+\item[Class \mbox{\hyperlink{a02121}{AAX\+\_\+\+IHost\+Processor}} ]\label{a00860__aax_plugin_implementation000004}%
+\Hypertarget{a00860__aax_plugin_implementation000004}%
+
+\end{DoxyRefList}\hypertarget{aax_sdk_internal}{}\doxysubsubsection{Interfaces internal to the AAX SDK}\label{aax_sdk_internal}
+These classes and interfaces are used internally within the AAX Library. References to objects implementing these classes are never passed between the plug-\/in and the AAX Host, and the AAX Host has no knowledge of these classes.
+
+
+\begin{DoxyRefList}
+\item[Class \mbox{\hyperlink{a02145}{AAX\+\_\+\+IParameter}} ]\label{a00860__aax_sdk_internal000002}%
+\Hypertarget{a00860__aax_sdk_internal000002}%
+ 
+\item[Class \mbox{\hyperlink{a02141}{AAX\+\_\+\+IParameter\+Value}} ]\label{a00860__aax_sdk_internal000001}%
+\Hypertarget{a00860__aax_sdk_internal000001}%
+ 
+\item[Class \mbox{\hyperlink{a02165}{AAX\+\_\+\+ITaper\+Delegate\+Base}} ]\label{a00860__aax_sdk_internal000003}%
+\Hypertarget{a00860__aax_sdk_internal000003}%
+
+\end{DoxyRefList}Collaboration diagram for AAX Interfaces\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=327pt]{a00860}
+\end{center}
+\end{figure}

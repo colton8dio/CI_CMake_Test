@@ -1,0 +1,15 @@
+<map id="AAX_CString::Length" name="AAX_CString::Length">
+<area shape="rect" id="node1" title=" " alt="" coords="503,279,649,306"/>
+<area shape="rect" id="node2" href="$a01729.html#a7261174f82f961b2573bfbf334ed064c" title="Constructor." alt="" coords="241,5,448,47"/>
+<area shape="rect" id="node3" href="$a01857.html#a840d1e71735c21a38136812a01693f91" title=" " alt="" coords="239,71,450,98"/>
+<area shape="rect" id="node5" href="$a01857.html#af21dca22bf79b4921f81432ba4e99223" title=" " alt="" coords="241,122,449,149"/>
+<area shape="rect" id="node7" href="$a01749.html#a7f4645d7e464d63ef22e93c4a99f3f09" title="Converts a string to a real parameter value." alt="" coords="241,173,448,215"/>
+<area shape="rect" id="node8" href="$a01829.html#a702a4dea21a72dc8edf6b91b5a5bf5e5" title="Converts a string to a real parameter value." alt="" coords="241,239,448,280"/>
+<area shape="rect" id="node9" href="$a01865.html#a4577b27d63067a75deead21c25f1b932" title="Converts a string to a real parameter value." alt="" coords="251,304,438,345"/>
+<area shape="rect" id="node10" href="$a01869.html#a6d930afe0a249f6936504c25d9c29764" title="Converts a string to a real parameter value." alt="" coords="235,369,455,411"/>
+<area shape="rect" id="node11" href="$a01749.html#ab301958be3d376757bf1bb88ded1c911" title="Converts a real parameter value to a string representation using a size hint, useful for control surf..." alt="" coords="241,435,448,476"/>
+<area shape="rect" id="node12" href="$a01789.html#a8cb553887b6a334fbcb6432770c67ed8" title="Converts a real parameter value to a string representation using a size hint, useful for control surf..." alt="" coords="241,500,449,541"/>
+<area shape="rect" id="node13" href="$a01865.html#a2a5d19b4d616c56e2c5e671cd3741ad3" title="Converts a real parameter value to a string representation using a size hint, useful for control surf..." alt="" coords="251,565,438,607"/>
+<area shape="rect" id="node4" href="$a01821.html#a332e391a496d741f0f86ee7e46dbe6a4" title="Sets the parameter&#39;s shortened display name." alt="" coords="5,57,187,99"/>
+<area shape="rect" id="node6" href="$a01821.html#a2cf8f9e426e01d3eabea95447e856c23" title="Returns the parameter&#39;s shortened display name." alt="" coords="5,123,187,164"/>
+</map>
