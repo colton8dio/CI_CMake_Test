@@ -863,103 +863,101 @@
 \contentsline {subsection}{\numberline {12.55.8}Known Issues in AAX Tools}{329}{subsection.12.55.8}%
 \contentsline {section}{\numberline {12.56}Change Log}{329}{section.12.56}%
 \contentsline {subsection}{\numberline {12.56.1}Change Log}{329}{subsection.12.56.1}%
-\contentsline {subsubsection}{\numberline {12.56.1.1}AAX SDK 2.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}4.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}1}{329}{subsubsection.12.56.1.1}%
+\contentsline {subsubsection}{\numberline {12.56.1.1}AAX SDK 2.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}4.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}0}{329}{subsubsection.12.56.1.1}%
 \contentsline {paragraph}{\numberline {12.56.1.1.1}Build}{329}{paragraph.12.56.1.1.1}%
-\contentsline {subsubsection}{\numberline {12.56.1.2}AAX SDK 2.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}4.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}0}{329}{subsubsection.12.56.1.2}%
-\contentsline {paragraph}{\numberline {12.56.1.2.1}Build}{329}{paragraph.12.56.1.2.1}%
-\contentsline {paragraph}{\numberline {12.56.1.2.2}Definitions}{330}{paragraph.12.56.1.2.2}%
-\contentsline {paragraph}{\numberline {12.56.1.2.3}Documentation}{330}{paragraph.12.56.1.2.3}%
-\contentsline {paragraph}{\numberline {12.56.1.2.4}Example plug-\/ins}{330}{paragraph.12.56.1.2.4}%
-\contentsline {paragraph}{\numberline {12.56.1.2.5}Interface}{330}{paragraph.12.56.1.2.5}%
-\contentsline {paragraph}{\numberline {12.56.1.2.6}Resolved bugs}{330}{paragraph.12.56.1.2.6}%
-\contentsline {paragraph}{\numberline {12.56.1.2.7}Utilities}{330}{paragraph.12.56.1.2.7}%
-\contentsline {subsubsection}{\numberline {12.56.1.3}AAX SDK 2.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}3.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}2}{331}{subsubsection.12.56.1.3}%
-\contentsline {paragraph}{\numberline {12.56.1.3.1}AAX Library}{331}{paragraph.12.56.1.3.1}%
-\contentsline {paragraph}{\numberline {12.56.1.3.2}Build}{331}{paragraph.12.56.1.3.2}%
-\contentsline {paragraph}{\numberline {12.56.1.3.3}Definitions}{331}{paragraph.12.56.1.3.3}%
-\contentsline {paragraph}{\numberline {12.56.1.3.4}Documentation}{331}{paragraph.12.56.1.3.4}%
-\contentsline {paragraph}{\numberline {12.56.1.3.5}Example plug-\/ins}{331}{paragraph.12.56.1.3.5}%
-\contentsline {paragraph}{\numberline {12.56.1.3.6}Resolved bugs}{331}{paragraph.12.56.1.3.6}%
-\contentsline {subsubsection}{\numberline {12.56.1.4}AAX SDK 2.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}3.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}1}{332}{subsubsection.12.56.1.4}%
-\contentsline {paragraph}{\numberline {12.56.1.4.1}AAX Library}{332}{paragraph.12.56.1.4.1}%
-\contentsline {paragraph}{\numberline {12.56.1.4.2}Definitions}{332}{paragraph.12.56.1.4.2}%
-\contentsline {paragraph}{\numberline {12.56.1.4.3}Documentation}{332}{paragraph.12.56.1.4.3}%
-\contentsline {paragraph}{\numberline {12.56.1.4.4}Example plug-\/ins}{332}{paragraph.12.56.1.4.4}%
-\contentsline {paragraph}{\numberline {12.56.1.4.5}Extensions}{333}{paragraph.12.56.1.4.5}%
-\contentsline {paragraph}{\numberline {12.56.1.4.6}Interface}{333}{paragraph.12.56.1.4.6}%
-\contentsline {paragraph}{\numberline {12.56.1.4.7}Utilities}{333}{paragraph.12.56.1.4.7}%
-\contentsline {subsubsection}{\numberline {12.56.1.5}AAX SDK 2.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}3.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}0}{333}{subsubsection.12.56.1.5}%
-\contentsline {paragraph}{\numberline {12.56.1.5.1}AAX Library}{333}{paragraph.12.56.1.5.1}%
-\contentsline {paragraph}{\numberline {12.56.1.5.2}Definitions}{333}{paragraph.12.56.1.5.2}%
-\contentsline {paragraph}{\numberline {12.56.1.5.3}Documentation}{334}{paragraph.12.56.1.5.3}%
-\contentsline {paragraph}{\numberline {12.56.1.5.4}Example plug-\/ins}{334}{paragraph.12.56.1.5.4}%
-\contentsline {paragraph}{\numberline {12.56.1.5.5}Interface}{334}{paragraph.12.56.1.5.5}%
-\contentsline {paragraph}{\numberline {12.56.1.5.6}Resolved bugs}{335}{paragraph.12.56.1.5.6}%
-\contentsline {subsubsection}{\numberline {12.56.1.6}AAX SDK 2.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}2.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}2}{335}{subsubsection.12.56.1.6}%
-\contentsline {paragraph}{\numberline {12.56.1.6.1}AAX Library}{335}{paragraph.12.56.1.6.1}%
-\contentsline {paragraph}{\numberline {12.56.1.6.2}Definitions}{335}{paragraph.12.56.1.6.2}%
-\contentsline {paragraph}{\numberline {12.56.1.6.3}Documentation}{335}{paragraph.12.56.1.6.3}%
-\contentsline {paragraph}{\numberline {12.56.1.6.4}Example plug-\/ins}{335}{paragraph.12.56.1.6.4}%
-\contentsline {paragraph}{\numberline {12.56.1.6.5}Extensions}{336}{paragraph.12.56.1.6.5}%
-\contentsline {paragraph}{\numberline {12.56.1.6.6}Interface}{336}{paragraph.12.56.1.6.6}%
-\contentsline {paragraph}{\numberline {12.56.1.6.7}Resolved bugs}{336}{paragraph.12.56.1.6.7}%
-\contentsline {paragraph}{\numberline {12.56.1.6.8}Utilities}{336}{paragraph.12.56.1.6.8}%
-\contentsline {subsubsection}{\numberline {12.56.1.7}AAX SDK 2.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}2.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}1}{336}{subsubsection.12.56.1.7}%
-\contentsline {paragraph}{\numberline {12.56.1.7.1}Interface}{336}{paragraph.12.56.1.7.1}%
-\contentsline {paragraph}{\numberline {12.56.1.7.2}Documentation}{336}{paragraph.12.56.1.7.2}%
-\contentsline {paragraph}{\numberline {12.56.1.7.3}AAX Library}{337}{paragraph.12.56.1.7.3}%
-\contentsline {paragraph}{\numberline {12.56.1.7.4}Definitions}{337}{paragraph.12.56.1.7.4}%
-\contentsline {subsubsection}{\numberline {12.56.1.8}AAX SDK 2.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}2.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}0}{337}{subsubsection.12.56.1.8}%
-\contentsline {paragraph}{\numberline {12.56.1.8.1}Interface}{337}{paragraph.12.56.1.8.1}%
-\contentsline {paragraph}{\numberline {12.56.1.8.2}Directory changes}{337}{paragraph.12.56.1.8.2}%
-\contentsline {paragraph}{\numberline {12.56.1.8.3}Extensions}{337}{paragraph.12.56.1.8.3}%
-\contentsline {paragraph}{\numberline {12.56.1.8.4}Definitions}{338}{paragraph.12.56.1.8.4}%
-\contentsline {paragraph}{\numberline {12.56.1.8.5}Utilities}{338}{paragraph.12.56.1.8.5}%
-\contentsline {paragraph}{\numberline {12.56.1.8.6}AAX Library}{338}{paragraph.12.56.1.8.6}%
-\contentsline {paragraph}{\numberline {12.56.1.8.7}Example plug-\/ins}{338}{paragraph.12.56.1.8.7}%
-\contentsline {paragraph}{\numberline {12.56.1.8.8}Documentation}{339}{paragraph.12.56.1.8.8}%
-\contentsline {subsubsection}{\numberline {12.56.1.9}AAX SDK 2.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}1.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}1}{339}{subsubsection.12.56.1.9}%
-\contentsline {paragraph}{\numberline {12.56.1.9.1}Definitions}{339}{paragraph.12.56.1.9.1}%
-\contentsline {paragraph}{\numberline {12.56.1.9.2}DSP}{339}{paragraph.12.56.1.9.2}%
-\contentsline {paragraph}{\numberline {12.56.1.9.3}Documentation}{339}{paragraph.12.56.1.9.3}%
-\contentsline {subsubsection}{\numberline {12.56.1.10}AAX SDK 2.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}1.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}0}{339}{subsubsection.12.56.1.10}%
-\contentsline {paragraph}{\numberline {12.56.1.10.1}Interface}{339}{paragraph.12.56.1.10.1}%
-\contentsline {paragraph}{\numberline {12.56.1.10.2}AAX Library}{340}{paragraph.12.56.1.10.2}%
-\contentsline {paragraph}{\numberline {12.56.1.10.3}Definitions}{340}{paragraph.12.56.1.10.3}%
-\contentsline {paragraph}{\numberline {12.56.1.10.4}Utilities}{340}{paragraph.12.56.1.10.4}%
-\contentsline {paragraph}{\numberline {12.56.1.10.5}Extensions}{340}{paragraph.12.56.1.10.5}%
-\contentsline {paragraph}{\numberline {12.56.1.10.6}Documentation}{341}{paragraph.12.56.1.10.6}%
-\contentsline {subsubsection}{\numberline {12.56.1.11}AAX SDK 2.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}0.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}1}{341}{subsubsection.12.56.1.11}%
-\contentsline {subsubsection}{\numberline {12.56.1.12}AAX SDK 2.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}0.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}0}{341}{subsubsection.12.56.1.12}%
+\contentsline {paragraph}{\numberline {12.56.1.1.2}Definitions}{330}{paragraph.12.56.1.1.2}%
+\contentsline {paragraph}{\numberline {12.56.1.1.3}Documentation}{330}{paragraph.12.56.1.1.3}%
+\contentsline {paragraph}{\numberline {12.56.1.1.4}Example plug-\/ins}{330}{paragraph.12.56.1.1.4}%
+\contentsline {paragraph}{\numberline {12.56.1.1.5}Interface}{330}{paragraph.12.56.1.1.5}%
+\contentsline {paragraph}{\numberline {12.56.1.1.6}Resolved bugs}{330}{paragraph.12.56.1.1.6}%
+\contentsline {paragraph}{\numberline {12.56.1.1.7}Utilities}{330}{paragraph.12.56.1.1.7}%
+\contentsline {subsubsection}{\numberline {12.56.1.2}AAX SDK 2.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}3.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}2}{331}{subsubsection.12.56.1.2}%
+\contentsline {paragraph}{\numberline {12.56.1.2.1}AAX Library}{331}{paragraph.12.56.1.2.1}%
+\contentsline {paragraph}{\numberline {12.56.1.2.2}Build}{331}{paragraph.12.56.1.2.2}%
+\contentsline {paragraph}{\numberline {12.56.1.2.3}Definitions}{331}{paragraph.12.56.1.2.3}%
+\contentsline {paragraph}{\numberline {12.56.1.2.4}Documentation}{331}{paragraph.12.56.1.2.4}%
+\contentsline {paragraph}{\numberline {12.56.1.2.5}Example plug-\/ins}{331}{paragraph.12.56.1.2.5}%
+\contentsline {paragraph}{\numberline {12.56.1.2.6}Resolved bugs}{331}{paragraph.12.56.1.2.6}%
+\contentsline {subsubsection}{\numberline {12.56.1.3}AAX SDK 2.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}3.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}1}{332}{subsubsection.12.56.1.3}%
+\contentsline {paragraph}{\numberline {12.56.1.3.1}AAX Library}{332}{paragraph.12.56.1.3.1}%
+\contentsline {paragraph}{\numberline {12.56.1.3.2}Definitions}{332}{paragraph.12.56.1.3.2}%
+\contentsline {paragraph}{\numberline {12.56.1.3.3}Documentation}{332}{paragraph.12.56.1.3.3}%
+\contentsline {paragraph}{\numberline {12.56.1.3.4}Example plug-\/ins}{332}{paragraph.12.56.1.3.4}%
+\contentsline {paragraph}{\numberline {12.56.1.3.5}Extensions}{333}{paragraph.12.56.1.3.5}%
+\contentsline {paragraph}{\numberline {12.56.1.3.6}Interface}{333}{paragraph.12.56.1.3.6}%
+\contentsline {paragraph}{\numberline {12.56.1.3.7}Utilities}{333}{paragraph.12.56.1.3.7}%
+\contentsline {subsubsection}{\numberline {12.56.1.4}AAX SDK 2.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}3.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}0}{333}{subsubsection.12.56.1.4}%
+\contentsline {paragraph}{\numberline {12.56.1.4.1}AAX Library}{333}{paragraph.12.56.1.4.1}%
+\contentsline {paragraph}{\numberline {12.56.1.4.2}Definitions}{333}{paragraph.12.56.1.4.2}%
+\contentsline {paragraph}{\numberline {12.56.1.4.3}Documentation}{334}{paragraph.12.56.1.4.3}%
+\contentsline {paragraph}{\numberline {12.56.1.4.4}Example plug-\/ins}{334}{paragraph.12.56.1.4.4}%
+\contentsline {paragraph}{\numberline {12.56.1.4.5}Interface}{334}{paragraph.12.56.1.4.5}%
+\contentsline {paragraph}{\numberline {12.56.1.4.6}Resolved bugs}{335}{paragraph.12.56.1.4.6}%
+\contentsline {subsubsection}{\numberline {12.56.1.5}AAX SDK 2.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}2.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}2}{335}{subsubsection.12.56.1.5}%
+\contentsline {paragraph}{\numberline {12.56.1.5.1}AAX Library}{335}{paragraph.12.56.1.5.1}%
+\contentsline {paragraph}{\numberline {12.56.1.5.2}Definitions}{335}{paragraph.12.56.1.5.2}%
+\contentsline {paragraph}{\numberline {12.56.1.5.3}Documentation}{335}{paragraph.12.56.1.5.3}%
+\contentsline {paragraph}{\numberline {12.56.1.5.4}Example plug-\/ins}{335}{paragraph.12.56.1.5.4}%
+\contentsline {paragraph}{\numberline {12.56.1.5.5}Extensions}{336}{paragraph.12.56.1.5.5}%
+\contentsline {paragraph}{\numberline {12.56.1.5.6}Interface}{336}{paragraph.12.56.1.5.6}%
+\contentsline {paragraph}{\numberline {12.56.1.5.7}Resolved bugs}{336}{paragraph.12.56.1.5.7}%
+\contentsline {paragraph}{\numberline {12.56.1.5.8}Utilities}{336}{paragraph.12.56.1.5.8}%
+\contentsline {subsubsection}{\numberline {12.56.1.6}AAX SDK 2.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}2.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}1}{336}{subsubsection.12.56.1.6}%
+\contentsline {paragraph}{\numberline {12.56.1.6.1}Interface}{336}{paragraph.12.56.1.6.1}%
+\contentsline {paragraph}{\numberline {12.56.1.6.2}Documentation}{336}{paragraph.12.56.1.6.2}%
+\contentsline {paragraph}{\numberline {12.56.1.6.3}AAX Library}{337}{paragraph.12.56.1.6.3}%
+\contentsline {paragraph}{\numberline {12.56.1.6.4}Definitions}{337}{paragraph.12.56.1.6.4}%
+\contentsline {subsubsection}{\numberline {12.56.1.7}AAX SDK 2.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}2.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}0}{337}{subsubsection.12.56.1.7}%
+\contentsline {paragraph}{\numberline {12.56.1.7.1}Interface}{337}{paragraph.12.56.1.7.1}%
+\contentsline {paragraph}{\numberline {12.56.1.7.2}Directory changes}{337}{paragraph.12.56.1.7.2}%
+\contentsline {paragraph}{\numberline {12.56.1.7.3}Extensions}{337}{paragraph.12.56.1.7.3}%
+\contentsline {paragraph}{\numberline {12.56.1.7.4}Definitions}{338}{paragraph.12.56.1.7.4}%
+\contentsline {paragraph}{\numberline {12.56.1.7.5}Utilities}{338}{paragraph.12.56.1.7.5}%
+\contentsline {paragraph}{\numberline {12.56.1.7.6}AAX Library}{338}{paragraph.12.56.1.7.6}%
+\contentsline {paragraph}{\numberline {12.56.1.7.7}Example plug-\/ins}{338}{paragraph.12.56.1.7.7}%
+\contentsline {paragraph}{\numberline {12.56.1.7.8}Documentation}{339}{paragraph.12.56.1.7.8}%
+\contentsline {subsubsection}{\numberline {12.56.1.8}AAX SDK 2.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}1.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}1}{339}{subsubsection.12.56.1.8}%
+\contentsline {paragraph}{\numberline {12.56.1.8.1}Definitions}{339}{paragraph.12.56.1.8.1}%
+\contentsline {paragraph}{\numberline {12.56.1.8.2}DSP}{339}{paragraph.12.56.1.8.2}%
+\contentsline {paragraph}{\numberline {12.56.1.8.3}Documentation}{339}{paragraph.12.56.1.8.3}%
+\contentsline {subsubsection}{\numberline {12.56.1.9}AAX SDK 2.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}1.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}0}{339}{subsubsection.12.56.1.9}%
+\contentsline {paragraph}{\numberline {12.56.1.9.1}Interface}{339}{paragraph.12.56.1.9.1}%
+\contentsline {paragraph}{\numberline {12.56.1.9.2}AAX Library}{340}{paragraph.12.56.1.9.2}%
+\contentsline {paragraph}{\numberline {12.56.1.9.3}Definitions}{340}{paragraph.12.56.1.9.3}%
+\contentsline {paragraph}{\numberline {12.56.1.9.4}Utilities}{340}{paragraph.12.56.1.9.4}%
+\contentsline {paragraph}{\numberline {12.56.1.9.5}Extensions}{340}{paragraph.12.56.1.9.5}%
+\contentsline {paragraph}{\numberline {12.56.1.9.6}Documentation}{341}{paragraph.12.56.1.9.6}%
+\contentsline {subsubsection}{\numberline {12.56.1.10}AAX SDK 2.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}0.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}1}{341}{subsubsection.12.56.1.10}%
+\contentsline {subsubsection}{\numberline {12.56.1.11}AAX SDK 2.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}0.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}0}{341}{subsubsection.12.56.1.11}%
+\contentsline {paragraph}{\numberline {12.56.1.11.1}AAX Library}{341}{paragraph.12.56.1.11.1}%
+\contentsline {paragraph}{\numberline {12.56.1.11.2}Definitions}{341}{paragraph.12.56.1.11.2}%
+\contentsline {paragraph}{\numberline {12.56.1.11.3}Algorithm}{341}{paragraph.12.56.1.11.3}%
+\contentsline {subsubsection}{\numberline {12.56.1.12}AAX SDK 1.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}5.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}0}{341}{subsubsection.12.56.1.12}%
 \contentsline {paragraph}{\numberline {12.56.1.12.1}AAX Library}{341}{paragraph.12.56.1.12.1}%
-\contentsline {paragraph}{\numberline {12.56.1.12.2}Definitions}{341}{paragraph.12.56.1.12.2}%
-\contentsline {paragraph}{\numberline {12.56.1.12.3}Algorithm}{341}{paragraph.12.56.1.12.3}%
-\contentsline {subsubsection}{\numberline {12.56.1.13}AAX SDK 1.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}5.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}0}{341}{subsubsection.12.56.1.13}%
-\contentsline {paragraph}{\numberline {12.56.1.13.1}AAX Library}{341}{paragraph.12.56.1.13.1}%
-\contentsline {subsubsection}{\numberline {12.56.1.14}AAX SDK 1.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}0.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}6}{341}{subsubsection.12.56.1.14}%
-\contentsline {paragraph}{\numberline {12.56.1.14.1}Documentation}{341}{paragraph.12.56.1.14.1}%
-\contentsline {paragraph}{\numberline {12.56.1.14.2}AAX Library}{342}{paragraph.12.56.1.14.2}%
-\contentsline {paragraph}{\numberline {12.56.1.14.3}DSP}{342}{paragraph.12.56.1.14.3}%
-\contentsline {subsubsection}{\numberline {12.56.1.15}AAX SDK 1.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}0.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}5}{342}{subsubsection.12.56.1.15}%
-\contentsline {paragraph}{\numberline {12.56.1.15.1}Directory Changes}{342}{paragraph.12.56.1.15.1}%
-\contentsline {paragraph}{\numberline {12.56.1.15.2}Documentation}{342}{paragraph.12.56.1.15.2}%
-\contentsline {paragraph}{\numberline {12.56.1.15.3}AAX Library}{342}{paragraph.12.56.1.15.3}%
-\contentsline {paragraph}{\numberline {12.56.1.15.4}DSP}{342}{paragraph.12.56.1.15.4}%
-\contentsline {subsubsection}{\numberline {12.56.1.16}AAX SDK 1.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}0.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}4}{343}{subsubsection.12.56.1.16}%
+\contentsline {subsubsection}{\numberline {12.56.1.13}AAX SDK 1.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}0.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}6}{341}{subsubsection.12.56.1.13}%
+\contentsline {paragraph}{\numberline {12.56.1.13.1}Documentation}{341}{paragraph.12.56.1.13.1}%
+\contentsline {paragraph}{\numberline {12.56.1.13.2}AAX Library}{342}{paragraph.12.56.1.13.2}%
+\contentsline {paragraph}{\numberline {12.56.1.13.3}DSP}{342}{paragraph.12.56.1.13.3}%
+\contentsline {subsubsection}{\numberline {12.56.1.14}AAX SDK 1.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}0.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}5}{342}{subsubsection.12.56.1.14}%
+\contentsline {paragraph}{\numberline {12.56.1.14.1}Directory Changes}{342}{paragraph.12.56.1.14.1}%
+\contentsline {paragraph}{\numberline {12.56.1.14.2}Documentation}{342}{paragraph.12.56.1.14.2}%
+\contentsline {paragraph}{\numberline {12.56.1.14.3}AAX Library}{342}{paragraph.12.56.1.14.3}%
+\contentsline {paragraph}{\numberline {12.56.1.14.4}DSP}{342}{paragraph.12.56.1.14.4}%
+\contentsline {subsubsection}{\numberline {12.56.1.15}AAX SDK 1.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}0.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}4}{343}{subsubsection.12.56.1.15}%
+\contentsline {paragraph}{\numberline {12.56.1.15.1}Describe}{343}{paragraph.12.56.1.15.1}%
+\contentsline {paragraph}{\numberline {12.56.1.15.2}AAX Library}{343}{paragraph.12.56.1.15.2}%
+\contentsline {paragraph}{\numberline {12.56.1.15.3}Documentation}{343}{paragraph.12.56.1.15.3}%
+\contentsline {subsubsection}{\numberline {12.56.1.16}AAX SDK 1.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}0.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}3}{343}{subsubsection.12.56.1.16}%
 \contentsline {paragraph}{\numberline {12.56.1.16.1}Describe}{343}{paragraph.12.56.1.16.1}%
-\contentsline {paragraph}{\numberline {12.56.1.16.2}AAX Library}{343}{paragraph.12.56.1.16.2}%
-\contentsline {paragraph}{\numberline {12.56.1.16.3}Documentation}{343}{paragraph.12.56.1.16.3}%
-\contentsline {subsubsection}{\numberline {12.56.1.17}AAX SDK 1.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}0.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}3}{343}{subsubsection.12.56.1.17}%
-\contentsline {paragraph}{\numberline {12.56.1.17.1}Describe}{343}{paragraph.12.56.1.17.1}%
-\contentsline {paragraph}{\numberline {12.56.1.17.2}Algorithm}{343}{paragraph.12.56.1.17.2}%
-\contentsline {paragraph}{\numberline {12.56.1.17.3}AAX Library}{343}{paragraph.12.56.1.17.3}%
-\contentsline {paragraph}{\numberline {12.56.1.17.4}DSP}{344}{paragraph.12.56.1.17.4}%
-\contentsline {paragraph}{\numberline {12.56.1.17.5}Utilities}{344}{paragraph.12.56.1.17.5}%
-\contentsline {paragraph}{\numberline {12.56.1.17.6}Documentation}{344}{paragraph.12.56.1.17.6}%
-\contentsline {subsubsection}{\numberline {12.56.1.18}AAX SDK 1.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}0.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}2}{344}{subsubsection.12.56.1.18}%
-\contentsline {paragraph}{\numberline {12.56.1.18.1}AAX Library}{344}{paragraph.12.56.1.18.1}%
-\contentsline {paragraph}{\numberline {12.56.1.18.2}Documentation}{344}{paragraph.12.56.1.18.2}%
-\contentsline {paragraph}{\numberline {12.56.1.18.3}Resolved bugs}{345}{paragraph.12.56.1.18.3}%
+\contentsline {paragraph}{\numberline {12.56.1.16.2}Algorithm}{343}{paragraph.12.56.1.16.2}%
+\contentsline {paragraph}{\numberline {12.56.1.16.3}AAX Library}{343}{paragraph.12.56.1.16.3}%
+\contentsline {paragraph}{\numberline {12.56.1.16.4}DSP}{344}{paragraph.12.56.1.16.4}%
+\contentsline {paragraph}{\numberline {12.56.1.16.5}Utilities}{344}{paragraph.12.56.1.16.5}%
+\contentsline {paragraph}{\numberline {12.56.1.16.6}Documentation}{344}{paragraph.12.56.1.16.6}%
+\contentsline {subsubsection}{\numberline {12.56.1.17}AAX SDK 1.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}0.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}2}{344}{subsubsection.12.56.1.17}%
+\contentsline {paragraph}{\numberline {12.56.1.17.1}AAX Library}{344}{paragraph.12.56.1.17.1}%
+\contentsline {paragraph}{\numberline {12.56.1.17.2}Documentation}{344}{paragraph.12.56.1.17.2}%
+\contentsline {paragraph}{\numberline {12.56.1.17.3}Resolved bugs}{345}{paragraph.12.56.1.17.3}%
 \contentsline {section}{\numberline {12.57}Example Plug-\/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Ins}{345}{section.12.57}%
 \contentsline {subsection}{\numberline {12.57.1}SDK Example plug-\/ins}{345}{subsection.12.57.1}%
 \contentsline {subsubsection}{\numberline {12.57.1.1}Basic examples}{345}{subsubsection.12.57.1.1}%
@@ -3872,7 +3870,6 @@
 \contentsline {subsubsection}{\numberline {15.164.2.20}AAX\_SDK\_2p3p1\_REVISION}{1351}{subsubsection.15.164.2.20}%
 \contentsline {subsubsection}{\numberline {15.164.2.21}AAX\_SDK\_2p3p2\_REVISION}{1351}{subsubsection.15.164.2.21}%
 \contentsline {subsubsection}{\numberline {15.164.2.22}AAX\_SDK\_2p4p0\_REVISION}{1351}{subsubsection.15.164.2.22}%
-\contentsline {subsubsection}{\numberline {15.164.2.23}AAX\_SDK\_2p4p1\_REVISION}{1352}{subsubsection.15.164.2.23}%
 \contentsline {section}{\numberline {15.165}AAX\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}VFeature\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Info.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{1352}{section.15.165}%
 \contentsline {section}{\numberline {15.166}AAX\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}VHost\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Processor\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Delegate.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{1352}{section.15.166}%
 \contentsline {subsection}{\numberline {15.166.1}Description}{1352}{subsection.15.166.1}%
@@ -3882,7 +3879,7 @@
 \contentsline {section}{\numberline {15.169}AAX\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}VPrivate\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Data\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Access.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{1353}{section.15.169}%
 \contentsline {subsection}{\numberline {15.169.1}Description}{1353}{subsection.15.169.1}%
 \contentsline {section}{\numberline {15.170}AAX\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}VProperty\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Map.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{1353}{section.15.170}%
-\contentsline {subsection}{\numberline {15.170.1}Description}{1354}{subsection.15.170.1}%
+\contentsline {subsection}{\numberline {15.170.1}Description}{1353}{subsection.15.170.1}%
 \contentsline {section}{\numberline {15.171}AAX\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}VTransport.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{1354}{section.15.171}%
 \contentsline {subsection}{\numberline {15.171.1}Description}{1354}{subsection.15.171.1}%
 \contentsline {section}{\numberline {15.172}AAX\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}VView\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Container.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{1354}{section.15.172}%

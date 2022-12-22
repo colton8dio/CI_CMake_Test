@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		21BD56581C47BDFB00FEEC5F /* libUnitTestPP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B00D0AF10E0287000816F7B /* libUnitTestPP.a */; };
+		21BD565B1C47BEB900FEEC5F /* libAAXLibrary_libcpp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 842A79751A6098F400EC60F5 /* libAAXLibrary_libcpp.a */; };
 		840CB8751DF7611A00C307AD /* AAX_VPageTable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 840CB8731DF7611A00C307AD /* AAX_VPageTable.cpp */; };
 		842A794B1A6098F400EC60F5 /* AAX_CEffectParameters.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B5A982710AE01F900BE4007 /* AAX_CEffectParameters.cpp */; };
 		842A794C1A6098F400EC60F5 /* AAX_CChunkDataParser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B5A982810AE01F900BE4007 /* AAX_CChunkDataParser.cpp */; };
@@ -41,6 +43,10 @@
 		842A796C1A6098F400EC60F5 /* AAX_CAutoreleasePool.OSX.mm in Sources */ = {isa = PBXBuildFile; fileRef = 52C4F61A14489D1D009BA4D7 /* AAX_CAutoreleasePool.OSX.mm */; };
 		842A796E1A6098F400EC60F5 /* AAX_Exports.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A25EC4241626170100FD9225 /* AAX_Exports.cpp */; };
 		842A79701A6098F400EC60F5 /* AAX_VEffectDescriptor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2707D25A16CC44900049F7AB /* AAX_VEffectDescriptor.cpp */; };
+		842A797A1A609EC200EC60F5 /* Digi_UT_Main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B00D08810E025F500816F7B /* Digi_UT_Main.cpp */; };
+		842A797B1A609EC200EC60F5 /* Digi_UT_MemLeakDetector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B00D08910E025F500816F7B /* Digi_UT_MemLeakDetector.cpp */; };
+		842A797C1A609EC200EC60F5 /* UnitTestAutomationDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2293E461353939C008FE1A0 /* UnitTestAutomationDelegate.cpp */; };
+		842A797D1A609EC200EC60F5 /* AllAAXLibUnitTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52B8703D14572540008549ED /* AllAAXLibUnitTests.cpp */; };
 		8458B33E1E0471B500082ADF /* AAX_VFeatureInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8458B33C1E0471B500082ADF /* AAX_VFeatureInfo.cpp */; };
 		84C75E531E00C1F000F7335D /* AAX_VDescriptionHost.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C75E511E00C1F000F7335D /* AAX_VDescriptionHost.cpp */; };
 /* End PBXBuildFile section */
@@ -48,6 +54,8 @@
 /* Begin PBXFileReference section */
 		100434D212DDFDE300618D07 /* AAX_CPacketDispatcher.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AAX_CPacketDispatcher.cpp; sourceTree = "<group>"; };
 		1673AB4C1417C0B400112610 /* AAX_VTransport.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AAX_VTransport.cpp; sourceTree = "<group>"; };
+		21DAF6A31B750D0800233AA5 /* libUnitTestPP_libstdcpp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libUnitTestPP_libstdcpp.a; path = ../../../../MacBag/Libs/Debug/libUnitTestPP_libstdcpp.a; sourceTree = "<group>"; };
+		2707D25416CC1D860049F7AB /* InterfaceSizeTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterfaceSizeTest.h; sourceTree = "<group>"; };
 		2707D25A16CC44900049F7AB /* AAX_VEffectDescriptor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; lineEnding = 0; path = AAX_VEffectDescriptor.cpp; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
 		2707D25C16CC44B30049F7AB /* AAX_VEffectDescriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = AAX_VEffectDescriptor.h; path = ../../../Interfaces/AAX_VEffectDescriptor.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		27F8B44A16B0F32600C0BE6F /* AAX_VAutomationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AAX_VAutomationDelegate.h; path = ../../../Interfaces/AAX_VAutomationDelegate.h; sourceTree = "<group>"; };
@@ -60,6 +68,15 @@
 		27F8B45316B0F32700C0BE6F /* AAX_VTransport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AAX_VTransport.h; path = ../../../Interfaces/AAX_VTransport.h; sourceTree = "<group>"; };
 		27F8B45416B0F32700C0BE6F /* AAX_VViewContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AAX_VViewContainer.h; path = ../../../Interfaces/AAX_VViewContainer.h; sourceTree = "<group>"; };
 		27F8B46016B0F98200C0BE6F /* AAX_Properties.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AAX_Properties.cpp; sourceTree = "<group>"; };
+		4B00D07510E0255E00816F7B /* DisplayDelegateTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisplayDelegateTest.h; sourceTree = "<group>"; };
+		4B00D07710E0255E00816F7B /* ParameterManagerTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParameterManagerTest.h; sourceTree = "<group>"; };
+		4B00D07910E0255E00816F7B /* StringTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringTest.h; sourceTree = "<group>"; };
+		4B00D07A10E0255E00816F7B /* TaperDelegateTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaperDelegateTest.h; sourceTree = "<group>"; };
+		4B00D07B10E0255E00816F7B /* TypedParameterTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TypedParameterTest.h; sourceTree = "<group>"; };
+		4B00D08710E025F500816F7B /* Digi_UT_Include.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Digi_UT_Include.h; path = ../../../../external/UnitTestPP_1.5/Digi_UnitTest/Digi_UT_Include.h; sourceTree = SOURCE_ROOT; };
+		4B00D08810E025F500816F7B /* Digi_UT_Main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Digi_UT_Main.cpp; path = ../../../../external/UnitTestPP_1.5/Digi_UnitTest/Digi_UT_Main.cpp; sourceTree = SOURCE_ROOT; };
+		4B00D08910E025F500816F7B /* Digi_UT_MemLeakDetector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Digi_UT_MemLeakDetector.cpp; path = ../../../../external/UnitTestPP_1.5/Digi_UnitTest/Digi_UT_MemLeakDetector.cpp; sourceTree = SOURCE_ROOT; };
+		4B00D0AF10E0287000816F7B /* libUnitTestPP.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libUnitTestPP.a; path = ../../../../MacBag/Libs/Debug/libUnitTestPP.a; sourceTree = SOURCE_ROOT; };
 		4B1427BA10B1E14500423FE4 /* AAX_CDecibelDisplayDelegateDecorator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AAX_CDecibelDisplayDelegateDecorator.h; path = ../../../Interfaces/AAX_CDecibelDisplayDelegateDecorator.h; sourceTree = "<group>"; };
 		4B1427C410B1E14500423FE4 /* AAX_CStringDisplayDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AAX_CStringDisplayDelegate.h; path = ../../../Interfaces/AAX_CStringDisplayDelegate.h; sourceTree = "<group>"; };
 		4B1427F610B1E15400423FE4 /* AAX_CParameterManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AAX_CParameterManager.cpp; sourceTree = "<group>"; };
@@ -69,6 +86,9 @@
 		4B5A982A10AE01F900BE4007 /* AAX_CommonConversions.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AAX_CommonConversions.cpp; sourceTree = "<group>"; };
 		4B5A982C10AE01F900BE4007 /* AAX_SliderConversions.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AAX_SliderConversions.cpp; sourceTree = "<group>"; };
 		5287B3B9145776CB0034595D /* AAX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AAX.h; path = ../../../Interfaces/AAX.h; sourceTree = SOURCE_ROOT; };
+		52B8703C14572518008549ED /* AllAAXLibUnitTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllAAXLibUnitTests.h; sourceTree = "<group>"; };
+		52B8703D14572540008549ED /* AllAAXLibUnitTests.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AllAAXLibUnitTests.cpp; sourceTree = "<group>"; };
+		52B870411457265F008549ED /* SizeTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SizeTest.h; sourceTree = "<group>"; };
 		52C4F61A14489D1D009BA4D7 /* AAX_CAutoreleasePool.OSX.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AAX_CAutoreleasePool.OSX.mm; sourceTree = "<group>"; };
 		52DE1A4813A2631700F1FC70 /* AAX_IEffectDirectData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AAX_IEffectDirectData.h; path = ../../../Interfaces/AAX_IEffectDirectData.h; sourceTree = "<group>"; };
 		52DE1A4B13A2633C00F1FC70 /* AAX_IACFEffectDirectData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AAX_IACFEffectDirectData.h; path = ../../../Interfaces/AAX_IACFEffectDirectData.h; sourceTree = SOURCE_ROOT; };
@@ -80,14 +100,18 @@
 		75C3BAF825656EE600AB233C /* AAX_TransportTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AAX_TransportTypes.h; path = ../../../Interfaces/AAX_TransportTypes.h; sourceTree = "<group>"; };
 		7715B7D114193D1400C6FE3C /* AAX_CMutex.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AAX_CMutex.cpp; sourceTree = "<group>"; };
 		77C7CD16141A31A400C09306 /* AAX_CMutex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AAX_CMutex.h; path = ../../../Interfaces/AAX_CMutex.h; sourceTree = "<group>"; };
+		8407D2A51810641D00771229 /* DataConversionTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataConversionTests.h; sourceTree = "<group>"; };
+		8407D2A6181064D800771229 /* ChunkDataParserTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChunkDataParserTest.h; sourceTree = "<group>"; };
 		840CB86F1DF75ED900C307AD /* AAX_IPageTable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AAX_IPageTable.h; path = ../../../Interfaces/AAX_IPageTable.h; sourceTree = "<group>"; };
 		840CB8711DF7600C00C307AD /* AAX_VPageTable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AAX_VPageTable.h; path = ../../../Interfaces/AAX_VPageTable.h; sourceTree = "<group>"; };
 		840CB8731DF7611A00C307AD /* AAX_VPageTable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AAX_VPageTable.cpp; sourceTree = "<group>"; };
 		840CB8791DF7667B00C307AD /* AAX_IACFPageTable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AAX_IACFPageTable.h; path = ../../../Interfaces/AAX_IACFPageTable.h; sourceTree = "<group>"; };
+		8421AF24184F982D00F9D6AA /* EffectParametersTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EffectParametersTest.h; sourceTree = "<group>"; };
 		8428366719AE4B5800851991 /* AAXLibrary_common.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = AAXLibrary_common.xcconfig; path = MacBuild/AAXLibrary_common.xcconfig; sourceTree = "<group>"; };
 		8428366819AE587B00851991 /* AAXLibrary_common_debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = AAXLibrary_common_debug.xcconfig; path = MacBuild/AAXLibrary_common_debug.xcconfig; sourceTree = "<group>"; };
 		8428366919AE587B00851991 /* AAXLibrary_common_release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = AAXLibrary_common_release.xcconfig; path = MacBuild/AAXLibrary_common_release.xcconfig; sourceTree = "<group>"; };
 		842A79751A6098F400EC60F5 /* libAAXLibrary_libcpp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAAXLibrary_libcpp.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		842A79851A609EC200EC60F5 /* AAXLibrary_libcpp_UnitTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AAXLibrary_libcpp_UnitTest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8444D73A18B8F06B0026F8D9 /* AAX_StringUtilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AAX_StringUtilities.h; path = ../../../Interfaces/AAX_StringUtilities.h; sourceTree = "<group>"; };
 		8444D73B18B8F0D40026F8D9 /* AAX_StringUtilities.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = AAX_StringUtilities.hpp; path = ../../../Interfaces/AAX_StringUtilities.hpp; sourceTree = "<group>"; };
 		8458B3391E046F6A00082ADF /* AAX_VFeatureInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AAX_VFeatureInfo.h; path = ../../../Interfaces/AAX_VFeatureInfo.h; sourceTree = "<group>"; };
@@ -99,8 +123,11 @@
 		845F0A8C1DFF5EB100784FBB /* AAX_VDescriptionHost.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AAX_VDescriptionHost.h; path = ../../../Interfaces/AAX_VDescriptionHost.h; sourceTree = "<group>"; };
 		8488410821D43B7000F191BC /* AAX_PreStructAlignmentHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AAX_PreStructAlignmentHelper.h; path = ../../../Interfaces/AAX_PreStructAlignmentHelper.h; sourceTree = "<group>"; };
 		8488410921D43BA400F191BC /* AAX_PostStructAlignmentHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AAX_PostStructAlignmentHelper.h; path = ../../../Interfaces/AAX_PostStructAlignmentHelper.h; sourceTree = "<group>"; };
+		8493648C1B150034001723AF /* AtomicOperationsTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AtomicOperationsTest.h; sourceTree = "<group>"; };
 		8493648D1B151BFB001723AF /* AAX_Atomic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AAX_Atomic.h; path = ../../../Interfaces/AAX_Atomic.h; sourceTree = "<group>"; };
+		84BB50391B25F353008A4F74 /* AAX_CTestThread.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AAX_CTestThread.h; sourceTree = "<group>"; };
 		84C75E511E00C1F000F7335D /* AAX_VDescriptionHost.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AAX_VDescriptionHost.cpp; sourceTree = "<group>"; };
+		84CC01221B13923000059497 /* AtomicQueueTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AtomicQueueTest.h; sourceTree = "<group>"; };
 		84DD60361E29699D0093E3C6 /* AAX_IACFPageTableController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AAX_IACFPageTableController.h; path = ../../../Interfaces/AAX_IACFPageTableController.h; sourceTree = "<group>"; };
 		84E8187F1E0321CE00027455 /* AAX_Exception.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AAX_Exception.h; path = ../../../Interfaces/AAX_Exception.h; sourceTree = "<group>"; };
 		84E9D0281E1F110C00DCEED4 /* AAX_PageTableUtilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AAX_PageTableUtilities.h; path = ../../../Interfaces/AAX_PageTableUtilities.h; sourceTree = "<group>"; };
@@ -109,6 +136,8 @@
 		A217F58D13AA58580044C5B0 /* AAX_CLogTaperDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AAX_CLogTaperDelegate.h; path = ../../../Interfaces/AAX_CLogTaperDelegate.h; sourceTree = SOURCE_ROOT; };
 		A217F58E13AA58580044C5B0 /* AAX_CRangeTaperDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AAX_CRangeTaperDelegate.h; path = ../../../Interfaces/AAX_CRangeTaperDelegate.h; sourceTree = SOURCE_ROOT; };
 		A217F58F13AA58580044C5B0 /* AAX_CStateTaperDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AAX_CStateTaperDelegate.h; path = ../../../Interfaces/AAX_CStateTaperDelegate.h; sourceTree = SOURCE_ROOT; };
+		A2293E461353939C008FE1A0 /* UnitTestAutomationDelegate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UnitTestAutomationDelegate.cpp; sourceTree = "<group>"; };
+		A2293E471353939C008FE1A0 /* UnitTestAutomationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnitTestAutomationDelegate.h; sourceTree = "<group>"; };
 		A22B69E1125FDDE600E39A44 /* AAX_CParameter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AAX_CParameter.cpp; sourceTree = "<group>"; };
 		A24708C513F1DAFA00982DA7 /* AAX_CBinaryDisplayDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AAX_CBinaryDisplayDelegate.h; path = ../../../Interfaces/AAX_CBinaryDisplayDelegate.h; sourceTree = SOURCE_ROOT; };
 		A24708C613F1DAFA00982DA7 /* AAX_CPercentDisplayDelegateDecorator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AAX_CPercentDisplayDelegateDecorator.h; path = ../../../Interfaces/AAX_CPercentDisplayDelegateDecorator.h; sourceTree = SOURCE_ROOT; };
@@ -144,6 +173,7 @@
 		A25EC43B1626170200FD9225 /* AAX_UIDs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AAX_UIDs.h; path = ../../../Interfaces/AAX_UIDs.h; sourceTree = "<group>"; };
 		A25EC43C1626170200FD9225 /* AAX_UtilsNative.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AAX_UtilsNative.h; path = ../../../Interfaces/AAX_UtilsNative.h; sourceTree = "<group>"; };
 		A25EC43D1626170200FD9225 /* AAX_Version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AAX_Version.h; path = ../../../Interfaces/AAX_Version.h; sourceTree = "<group>"; };
+		A266A09D126E1B31004FF21F /* EffectParametersChunkTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EffectParametersChunkTest.h; sourceTree = "<group>"; };
 		A26FE5D6134D7CB30003F059 /* AAX_CEffectGUI.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AAX_CEffectGUI.cpp; sourceTree = "<group>"; };
 		A26FE5D7134D7CB30003F059 /* AAX_CEffectGUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AAX_CEffectGUI.h; path = ../../../Interfaces/AAX_CEffectGUI.h; sourceTree = SOURCE_ROOT; };
 		A26FE5D8134D7CB30003F059 /* AAX_IEffectGUI.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AAX_IEffectGUI.cpp; sourceTree = "<group>"; };
@@ -185,6 +215,8 @@
 		F04AB42E123AEA3800FDE122 /* AAX_VComponentDescriptor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AAX_VComponentDescriptor.cpp; sourceTree = "<group>"; };
 		F071074912A8235C008DC043 /* AAX_CHostServices.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AAX_CHostServices.cpp; sourceTree = "<group>"; };
 		F07107A812A83C61008DC043 /* AAX_VHostServices.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AAX_VHostServices.cpp; sourceTree = "<group>"; };
+		F085EB8712D3E03900A9D651 /* GlobalUnitTest.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = GlobalUnitTest.xcconfig; path = ../../../../external/UnitTestPP_1.5/Digi_UnitTest/Templates/GlobalUnitTest.xcconfig; sourceTree = SOURCE_ROOT; };
+		F085EB8812D3E03900A9D651 /* GlobalUnitTestRelease.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = GlobalUnitTestRelease.xcconfig; path = ../../../../external/UnitTestPP_1.5/Digi_UnitTest/Templates/GlobalUnitTestRelease.xcconfig; sourceTree = SOURCE_ROOT; };
 		F085EB8912D3E05B00A9D651 /* AAX_Init.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AAX_Init.h; path = ../../../Interfaces/AAX_Init.h; sourceTree = SOURCE_ROOT; };
 		F085EB8B12D3E07500A9D651 /* AAX_IACFHostProcessorDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AAX_IACFHostProcessorDelegate.h; path = ../../../Interfaces/AAX_IACFHostProcessorDelegate.h; sourceTree = SOURCE_ROOT; };
 		F085EB8D12D3E07F00A9D651 /* AAX_IACFCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AAX_IACFCollection.h; path = ../../../Interfaces/AAX_IACFCollection.h; sourceTree = SOURCE_ROOT; };
@@ -207,6 +239,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		842A797E1A609EC200EC60F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21BD565B1C47BEB900FEEC5F /* libAAXLibrary_libcpp.a in Frameworks */,
+				21BD56581C47BDFB00FEEC5F /* libUnitTestPP.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +280,30 @@
 				842A79751A6098F400EC60F5 /* libAAXLibrary_libcpp.a */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		4B00D07310E0251100816F7B /* UnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				4B00D0AF10E0287000816F7B /* libUnitTestPP.a */,
+				21DAF6A31B750D0800233AA5 /* libUnitTestPP_libstdcpp.a */,
+				F085EB8712D3E03900A9D651 /* GlobalUnitTest.xcconfig */,
+				F085EB8812D3E03900A9D651 /* GlobalUnitTestRelease.xcconfig */,
+				4B00D08D10E025FC00816F7B /* Digi_UT */,
+				52B870421457267E008549ED /* AAXLibrary_UnitTests */,
+			);
+			name = UnitTests;
+			path = ../UnitTests;
+			sourceTree = "<group>";
+		};
+		4B00D08D10E025FC00816F7B /* Digi_UT */ = {
+			isa = PBXGroup;
+			children = (
+				4B00D08710E025F500816F7B /* Digi_UT_Include.h */,
+				4B00D08810E025F500816F7B /* Digi_UT_Main.cpp */,
+				4B00D08910E025F500816F7B /* Digi_UT_MemLeakDetector.cpp */,
+			);
+			name = Digi_UT;
 			sourceTree = "<group>";
 		};
 		4B5A981110AE01F900BE4007 /* include */ = {
@@ -274,6 +339,31 @@
 				D51E4A0412B3E99F005CE163 /* Versioned Interfaces */,
 			);
 			path = source;
+			sourceTree = "<group>";
+		};
+		52B870421457267E008549ED /* AAXLibrary_UnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				52B8703D14572540008549ED /* AllAAXLibUnitTests.cpp */,
+				52B8703C14572518008549ED /* AllAAXLibUnitTests.h */,
+				8493648C1B150034001723AF /* AtomicOperationsTest.h */,
+				84CC01221B13923000059497 /* AtomicQueueTest.h */,
+				8407D2A6181064D800771229 /* ChunkDataParserTest.h */,
+				8407D2A51810641D00771229 /* DataConversionTests.h */,
+				4B00D07510E0255E00816F7B /* DisplayDelegateTest.h */,
+				A266A09D126E1B31004FF21F /* EffectParametersChunkTest.h */,
+				8421AF24184F982D00F9D6AA /* EffectParametersTest.h */,
+				2707D25416CC1D860049F7AB /* InterfaceSizeTest.h */,
+				4B00D07710E0255E00816F7B /* ParameterManagerTest.h */,
+				52B870411457265F008549ED /* SizeTest.h */,
+				4B00D07910E0255E00816F7B /* StringTest.h */,
+				4B00D07A10E0255E00816F7B /* TaperDelegateTest.h */,
+				4B00D07B10E0255E00816F7B /* TypedParameterTest.h */,
+				A2293E461353939C008FE1A0 /* UnitTestAutomationDelegate.cpp */,
+				A2293E471353939C008FE1A0 /* UnitTestAutomationDelegate.h */,
+				84BB50391B25F353008A4F74 /* AAX_CTestThread.h */,
+			);
+			name = AAXLibrary_UnitTests;
 			sourceTree = "<group>";
 		};
 		8428366A19AE5E7700851991 /* configuration */ = {
@@ -506,6 +596,22 @@
 			productReference = 842A79751A6098F400EC60F5 /* libAAXLibrary_libcpp.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		842A79761A609EC200EC60F5 /* AAXLibrary_libcpp_UnitTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 842A79821A609EC200EC60F5 /* Build configuration list for PBXNativeTarget "AAXLibrary_libcpp_UnitTest" */;
+			buildPhases = (
+				842A79791A609EC200EC60F5 /* Sources */,
+				842A797E1A609EC200EC60F5 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AAXLibrary_libcpp_UnitTest;
+			productName = AAXLibrary_ParameterManager_UnitTest;
+			productReference = 842A79851A609EC200EC60F5 /* AAXLibrary_libcpp_UnitTest */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -578,6 +684,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		842A79791A609EC200EC60F5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				842A797A1A609EC200EC60F5 /* Digi_UT_Main.cpp in Sources */,
+				842A797B1A609EC200EC60F5 /* Digi_UT_MemLeakDetector.cpp in Sources */,
+				842A797C1A609EC200EC60F5 /* UnitTestAutomationDelegate.cpp in Sources */,
+				842A797D1A609EC200EC60F5 /* AllAAXLibUnitTests.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
@@ -618,6 +735,7 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
 				GCC_TREAT_INCOMPATIBLE_POINTER_TYPE_WARNINGS_AS_ERRORS = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
@@ -682,6 +800,7 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
 				GCC_TREAT_INCOMPATIBLE_POINTER_TYPE_WARNINGS_AS_ERRORS = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
@@ -718,7 +837,6 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				PRODUCT_NAME = AAXLibrary_libcpp;
-				SEPARATE_STRIP = NO;
 			};
 			name = Debug;
 		};
@@ -730,7 +848,101 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				PRODUCT_NAME = AAXLibrary_libcpp;
-				SEPARATE_STRIP = YES;
+			};
+			name = Release;
+		};
+		842A79831A609EC200EC60F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F085EB8712D3E03900A9D651 /* GlobalUnitTest.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN__EXIT_TIME_DESTRUCTORS = NO;
+				CODE_SIGN_IDENTITY = "-";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
+				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_MISSING_PARENTHESES = YES;
+				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = NO;
+				GCC_WARN_PROTOTYPE_CONVERSION = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_PARAMETER = YES;
+				GCC_WARN_UNUSED_VALUE = YES;
+				HEADER_SEARCH_PATHS = (
+					../,
+					../include,
+					"\"$(SRCROOT)/../../../Interfaces\"",
+					"\"$(SRCROOT)/../../../Interfaces/ACF\"",
+					../../../../external/UnitTestPP_1.5/,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"../../../Libs/$(CONFIGURATION)",
+					"../../../../MacBag/Libs/$(CONFIGURATION)",
+				);
+				MacBag = "$(SRCROOT)/../../../../MacBag";
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(OTHER_CFLAGS)",
+					"-fnon-call-exceptions",
+					"-fasynchronous-unwind-tables",
+					"-Qunused-arguments",
+				);
+				PRODUCT_NAME = AAXLibrary_libcpp_UnitTest;
+			};
+			name = Debug;
+		};
+		842A79841A609EC200EC60F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F085EB8812D3E03900A9D651 /* GlobalUnitTestRelease.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN__EXIT_TIME_DESTRUCTORS = NO;
+				CODE_SIGN_IDENTITY = "-";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
+				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_MISSING_PARENTHESES = YES;
+				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = NO;
+				GCC_WARN_PROTOTYPE_CONVERSION = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_PARAMETER = YES;
+				GCC_WARN_UNUSED_VALUE = YES;
+				HEADER_SEARCH_PATHS = (
+					../,
+					../include,
+					"\"$(SRCROOT)/../../../Interfaces\"",
+					"\"$(SRCROOT)/../../../Interfaces/ACF\"",
+					../../../../external/UnitTestPP_1.5/,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"../../../Libs/$(CONFIGURATION)",
+					"../../../../MacBag/Libs/$(CONFIGURATION)",
+				);
+				MacBag = "$(SRCROOT)/../../../../MacBag";
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(OTHER_CFLAGS)",
+					"-fnon-call-exceptions",
+					"-fasynchronous-unwind-tables",
+					"-Qunused-arguments",
+				);
+				PRODUCT_NAME = AAXLibrary_libcpp_UnitTest;
+				ZERO_LINK = NO;
 			};
 			name = Release;
 		};
@@ -751,6 +963,15 @@
 			buildConfigurations = (
 				842A79731A6098F400EC60F5 /* Debug */,
 				842A79741A6098F400EC60F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		842A79821A609EC200EC60F5 /* Build configuration list for PBXNativeTarget "AAXLibrary_libcpp_UnitTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				842A79831A609EC200EC60F5 /* Debug */,
+				842A79841A609EC200EC60F5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

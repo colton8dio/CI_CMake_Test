@@ -1,9 +1,9 @@
 =============================================
 
-AAX SDK 2.4.1
+AAX SDK 2.4.0
 
 ReadMe.txt
-Copyright 2014-2022 by Avid Technology, Inc.
+Copyright 2014-2021 by Avid Technology, Inc.
 All rights reserved.
 
 CONFIDENTIAL: This document contains confidential information.  Do not

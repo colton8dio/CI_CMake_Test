@@ -9772,16 +9772,6 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>AAX_SDK_2p4p1_REVISION</Name>
-      <APILanguage>unknown</APILanguage>
-      <Type>macro</Type>
-    </TokenIdentifier>
-    <Path>a00722.html</Path>
-    <Anchor>aafd0114e7f612a0b3c3ec3def755cb57</Anchor>
-    <DeclaredIn>AAX_Version.h</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>todo</Name>
       <APILanguage>unknown</APILanguage>
     </TokenIdentifier>

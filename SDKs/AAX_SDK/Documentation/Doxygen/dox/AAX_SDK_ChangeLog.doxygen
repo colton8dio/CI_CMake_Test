@@ -1,7 +1,7 @@
 /*===================================================================================================
 AAX_SDK_Changelog.doxygen
 
-Copyright 2016-2017, 2019, 2021-2022 by Avid Technology, Inc.
+Copyright 2016-2017, 2019, 2021 by Avid Technology, Inc.
 All rights reserved.
 
 ===================================================================================================*/
@@ -36,18 +36,6 @@ All rights reserved.
 	\endnodox
 
 \section changelog Change Log
-
-\subsection aax_sdk_2p4p1 AAX SDK 2.4.1
-
-  \subsubsection aax_sdk_VERSION_Build Build
-    <UL>
-      <LI>
-        Treat Warnings As Errors is now disabled for the AAX Library Xcode project
-  	  </LI>
-      <LI>
-        The AAX Library Xcode project is no longer configured to use the Legacy Build System, which is deprecated in current Xcode
-  	  </LI>
-    </UL>
 
 \subsection aax_sdk_2p4p0 AAX SDK 2.4.0
   \subsubsection aax_sdk_2p4p0_Build Build

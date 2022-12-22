@@ -1,0 +1,58 @@
+{
+  "_buildCommand2" : {
+    "command" : "prepareForIndexing",
+    "enableIndexBuildArena" : false,
+    "targets" : null
+  },
+  "buildCommand" : "build",
+  "configuredTargets" : [
+    {
+      "guid" : "bf6640b3a7b6f27c5d3822cf97997e3fcb817e2834c25733ab52b4022cbf0ced"
+    }
+  ],
+  "containerPath" : "/Users/stevenharbor/Dropbox/Mac/Documents/aax-sdk-2-4-0/Libs/AAXLibrary/MacBuild/AAXLibrary.xcodeproj",
+  "continueBuildingAfterErrors" : true,
+  "enableIndexBuildArena" : false,
+  "hideShellScriptEnvironment" : false,
+  "parameters" : {
+    "action" : "build",
+    "activeArchitecture" : "arm64",
+    "activeRunDestination" : {
+      "disableOnlyActiveArch" : false,
+      "platform" : "macosx",
+      "sdk" : "macosx12.1",
+      "sdkVariant" : "macos",
+      "supportedArchitectures" : [
+        "arm64e",
+        "arm64",
+        "x86_64"
+      ],
+      "targetArchitecture" : "arm64"
+    },
+    "arenaInfo" : {
+      "buildIntermediatesPath" : "",
+      "buildProductsPath" : "",
+      "derivedDataPath" : "/Users/stevenharbor/Library/Developer/Xcode/DerivedData",
+      "indexDataStoreFolderPath" : "/Users/stevenharbor/Library/Developer/Xcode/DerivedData/AAXLibrary-bajlnfvhpkxkwmhidfxvvpmqbhum/Index/DataStore",
+      "indexEnableDataStore" : true,
+      "indexPCHPath" : "/Users/stevenharbor/Library/Developer/Xcode/DerivedData/AAXLibrary-bajlnfvhpkxkwmhidfxvvpmqbhum/Index/PrecompiledHeaders",
+      "pchPath" : ""
+    },
+    "configurationName" : "Release",
+    "overrides" : {
+      "synthesized" : {
+        "table" : {
+          "ENABLE_PREVIEWS" : "NO"
+        }
+      }
+    }
+  },
+  "schemeCommand" : "launch",
+  "schemeCommand2" : "launch",
+  "shouldCollectMetrics" : false,
+  "showNonLoggedProgress" : true,
+  "useDryRun" : false,
+  "useImplicitDependencies" : true,
+  "useLegacyBuildLocations" : false,
+  "useParallelTargets" : true
+}

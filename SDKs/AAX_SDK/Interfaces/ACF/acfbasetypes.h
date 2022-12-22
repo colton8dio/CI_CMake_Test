@@ -306,7 +306,7 @@
  *  Processor:  Arm
  *  OS:         iOS
  */
-#elif (TARGET_OS_IOS)
+//#elif (TARGET_OS_IOS)
 #define ACF_CPU_ARM
 #define ACF_OS_IOS
 #define ACF_OS_UNIX

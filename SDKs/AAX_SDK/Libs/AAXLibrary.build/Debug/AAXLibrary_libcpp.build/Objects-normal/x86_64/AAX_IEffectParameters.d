@@ -1,22 +1,22 @@
 dependencies: \
-  /Volumes/iMacPro_Ext/Local_Storage/8Dio/JUCE_CI/CI_CMake_Test/SDKs/AAX_SDK/Libs/AAXLibrary/source/AAX_IEffectParameters.cpp \
-  /Volumes/iMacPro_Ext/Local_Storage/8Dio/JUCE_CI/CI_CMake_Test/SDKs/AAX_SDK/Interfaces/AAX_IEffectParameters.h \
-  /Volumes/iMacPro_Ext/Local_Storage/8Dio/JUCE_CI/CI_CMake_Test/SDKs/AAX_SDK/Interfaces/AAX_IACFEffectParameters.h \
-  /Volumes/iMacPro_Ext/Local_Storage/8Dio/JUCE_CI/CI_CMake_Test/SDKs/AAX_SDK/Interfaces/AAX.h \
-  /Volumes/iMacPro_Ext/Local_Storage/8Dio/JUCE_CI/CI_CMake_Test/SDKs/AAX_SDK/Interfaces/AAX_Version.h \
-  /Volumes/iMacPro_Ext/Local_Storage/8Dio/JUCE_CI/CI_CMake_Test/SDKs/AAX_SDK/Interfaces/AAX_Enums.h \
-  /Volumes/iMacPro_Ext/Local_Storage/8Dio/JUCE_CI/CI_CMake_Test/SDKs/AAX_SDK/Interfaces/AAX_Errors.h \
-  /Volumes/iMacPro_Ext/Local_Storage/8Dio/JUCE_CI/CI_CMake_Test/SDKs/AAX_SDK/Interfaces/AAX_Properties.h \
-  /Volumes/iMacPro_Ext/Local_Storage/8Dio/JUCE_CI/CI_CMake_Test/SDKs/AAX_SDK/Interfaces/AAX_PreStructAlignmentHelper.h \
-  /Volumes/iMacPro_Ext/Local_Storage/8Dio/JUCE_CI/CI_CMake_Test/SDKs/AAX_SDK/Interfaces/AAX_Push8ByteStructAlignment.h \
-  /Volumes/iMacPro_Ext/Local_Storage/8Dio/JUCE_CI/CI_CMake_Test/SDKs/AAX_SDK/Interfaces/AAX_PostStructAlignmentHelper.h \
-  /Volumes/iMacPro_Ext/Local_Storage/8Dio/JUCE_CI/CI_CMake_Test/SDKs/AAX_SDK/Interfaces/AAX_PopStructAlignment.h \
-  /Volumes/iMacPro_Ext/Local_Storage/8Dio/JUCE_CI/CI_CMake_Test/SDKs/AAX_SDK/Interfaces/ACF/acfunknown.h \
-  /Volumes/iMacPro_Ext/Local_Storage/8Dio/JUCE_CI/CI_CMake_Test/SDKs/AAX_SDK/Interfaces/ACF/acfbasetypes.h \
-  /Volumes/iMacPro_Ext/Local_Storage/8Dio/JUCE_CI/CI_CMake_Test/SDKs/AAX_SDK/Interfaces/ACF/defineacfuid.h \
-  /Volumes/iMacPro_Ext/Local_Storage/8Dio/JUCE_CI/CI_CMake_Test/SDKs/AAX_SDK/Interfaces/ACF/CACFUnknown.h \
-  /Volumes/iMacPro_Ext/Local_Storage/8Dio/JUCE_CI/CI_CMake_Test/SDKs/AAX_SDK/Interfaces/ACF/acfbaseapi.h \
-  /Volumes/iMacPro_Ext/Local_Storage/8Dio/JUCE_CI/CI_CMake_Test/SDKs/AAX_SDK/Interfaces/ACF/acfresult.h \
-  /Volumes/iMacPro_Ext/Local_Storage/8Dio/JUCE_CI/CI_CMake_Test/SDKs/AAX_SDK/Interfaces/AAX_UIDs.h \
-  /Volumes/iMacPro_Ext/Local_Storage/8Dio/JUCE_CI/CI_CMake_Test/SDKs/AAX_SDK/Interfaces/ACF/acfuids.h \
-  /Volumes/iMacPro_Ext/Local_Storage/8Dio/JUCE_CI/CI_CMake_Test/SDKs/AAX_SDK/Interfaces/ACF/acfextras.h
+  /Users/stevenharbor/Dropbox/Mac/Documents/aax-sdk-2-4-0/Libs/AAXLibrary/source/AAX_IEffectParameters.cpp \
+  /Users/stevenharbor/Dropbox/Mac/Documents/aax-sdk-2-4-0/Interfaces/AAX_IEffectParameters.h \
+  /Users/stevenharbor/Dropbox/Mac/Documents/aax-sdk-2-4-0/Interfaces/AAX_IACFEffectParameters.h \
+  /Users/stevenharbor/Dropbox/Mac/Documents/aax-sdk-2-4-0/Interfaces/AAX.h \
+  /Users/stevenharbor/Dropbox/Mac/Documents/aax-sdk-2-4-0/Interfaces/AAX_Version.h \
+  /Users/stevenharbor/Dropbox/Mac/Documents/aax-sdk-2-4-0/Interfaces/AAX_Enums.h \
+  /Users/stevenharbor/Dropbox/Mac/Documents/aax-sdk-2-4-0/Interfaces/AAX_Errors.h \
+  /Users/stevenharbor/Dropbox/Mac/Documents/aax-sdk-2-4-0/Interfaces/AAX_Properties.h \
+  /Users/stevenharbor/Dropbox/Mac/Documents/aax-sdk-2-4-0/Interfaces/AAX_PreStructAlignmentHelper.h \
+  /Users/stevenharbor/Dropbox/Mac/Documents/aax-sdk-2-4-0/Interfaces/AAX_Push8ByteStructAlignment.h \
+  /Users/stevenharbor/Dropbox/Mac/Documents/aax-sdk-2-4-0/Interfaces/AAX_PostStructAlignmentHelper.h \
+  /Users/stevenharbor/Dropbox/Mac/Documents/aax-sdk-2-4-0/Interfaces/AAX_PopStructAlignment.h \
+  /Users/stevenharbor/Dropbox/Mac/Documents/aax-sdk-2-4-0/Interfaces/ACF/acfunknown.h \
+  /Users/stevenharbor/Dropbox/Mac/Documents/aax-sdk-2-4-0/Interfaces/ACF/acfbasetypes.h \
+  /Users/stevenharbor/Dropbox/Mac/Documents/aax-sdk-2-4-0/Interfaces/ACF/defineacfuid.h \
+  /Users/stevenharbor/Dropbox/Mac/Documents/aax-sdk-2-4-0/Interfaces/ACF/CACFUnknown.h \
+  /Users/stevenharbor/Dropbox/Mac/Documents/aax-sdk-2-4-0/Interfaces/ACF/acfbaseapi.h \
+  /Users/stevenharbor/Dropbox/Mac/Documents/aax-sdk-2-4-0/Interfaces/ACF/acfresult.h \
+  /Users/stevenharbor/Dropbox/Mac/Documents/aax-sdk-2-4-0/Interfaces/AAX_UIDs.h \
+  /Users/stevenharbor/Dropbox/Mac/Documents/aax-sdk-2-4-0/Interfaces/ACF/acfuids.h \
+  /Users/stevenharbor/Dropbox/Mac/Documents/aax-sdk-2-4-0/Interfaces/ACF/acfextras.h

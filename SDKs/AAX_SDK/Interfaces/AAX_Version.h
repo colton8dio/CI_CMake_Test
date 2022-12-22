@@ -1,7 +1,7 @@
 /*================================================================================================*/
 /*
 
- *	Copyright 2013-2017, 2019, 2021-2022 by Avid Technology, Inc.
+ *	Copyright 2013-2017, 2019 by Avid Technology, Inc.
  *	All rights reserved.
  *	
  *	CONFIDENTIAL: This document contains confidential information.  Do not 
@@ -49,7 +49,7 @@
 
 /** \brief An atomic revision number for the source included in this SDK
  */
-#define AAX_SDK_CURRENT_REVISION ( 20204010 )
+#define AAX_SDK_CURRENT_REVISION ( 20204000 )
 
 
 #define AAX_SDK_1p0p1_REVISION ( 3712639 )
@@ -71,7 +71,6 @@
 #define AAX_SDK_2p3p1_REVISION ( 13200373 )
 #define AAX_SDK_2p3p2_REVISION ( 14017972 )
 #define AAX_SDK_2p4p0_REVISION ( 20204000 )
-#define AAX_SDK_2p4p1_REVISION ( 20204010 )
 //CURREVSTAMP < do not remove this comment
 
 
