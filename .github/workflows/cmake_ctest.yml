@@ -126,7 +126,8 @@ jobs:
     - name: AAX Signing (macOS)
       if: ${{ matrix.name == 'macOS' }}
       run: |
-        wraptool sign --verbose --account ${{ secrets.ILOK_USERNAME }} --wcguid ${{ secrets.WCGUID }} --signid ${{ secrets.DEVELOPER_ID_APPLICATION}} --in '/Users/ColtonDodd/Documents/actions-runner/_work/CI_CMake_Test/CI_CMake_Test/Builds/CI_CMake_Test_artefacts/Release/AAX/CI_CMake_Test.aaxplugin' --out '/Users/ColtonDodd/Documents/actions-runner/_work/CI_CMake_Test/CI_CMake_Test/Builds/CI_CMake_Test_artefacts/Release/AAX/CI_CMake_Test.aaxplugin' --autoinstall on
+        /Applications/PACEAntiPiracy/Eden/Fusion/Versions/5/bin/wraptool sign --verbose --account ${{ secrets.ILOK_USERNAME }} --signid "${{ secrets.DEVELOPER_ID_APPLICATION}}" --wcguid ${{ secrets.WCGUID }} --in Users/ColtonDodd/Documents/actions-runner/_work/CI_CMake_Test/CI_CMake_Test/Builds/CI_CMake_Test_artefacts/Release/AAX/CI_CMake_Test.aaxplugin --out Users/ColtonDodd/Documents/actions-runner/_work/CI_CMake_Test/CI_CMake_Test/Builds/CI_CMake_Test_artefacts/Release/AAX/CI_CMake_Test.aaxplugin --autoinstall on -headerpad
+        /Applications/PACEAntiPiracy/Eden/Fusion/Versions/5/bin/wraptool verify --verbose --in Users/ColtonDodd/Documents/actions-runner/_work/CI_CMake_Test/CI_CMake_Test/Builds/CI_CMake_Test_artefacts/Release/AAX/CI_CMake_Test.aaxplugin
 
   # For 7z command - brew install p7zip
   # Pluginval on Windows isn't compatible with Ninja.
