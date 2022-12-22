@@ -1,11 +1,11 @@
 dependencies: \
-  /Users/stevenharbor/Dropbox/Mac/Documents/aax-sdk-2-4-0/Interfaces/ACF/CACFClassFactory.cpp \
-  /Users/stevenharbor/Dropbox/Mac/Documents/aax-sdk-2-4-0/Interfaces/ACF/CACFClassFactory.h \
-  /Users/stevenharbor/Dropbox/Mac/Documents/aax-sdk-2-4-0/Interfaces/ACF/CACFUnknown.h \
-  /Users/stevenharbor/Dropbox/Mac/Documents/aax-sdk-2-4-0/Interfaces/ACF/acfbaseapi.h \
-  /Users/stevenharbor/Dropbox/Mac/Documents/aax-sdk-2-4-0/Interfaces/ACF/acfbasetypes.h \
-  /Users/stevenharbor/Dropbox/Mac/Documents/aax-sdk-2-4-0/Interfaces/ACF/acfunknown.h \
-  /Users/stevenharbor/Dropbox/Mac/Documents/aax-sdk-2-4-0/Interfaces/ACF/defineacfuid.h \
-  /Users/stevenharbor/Dropbox/Mac/Documents/aax-sdk-2-4-0/Interfaces/ACF/acfresult.h \
-  /Users/stevenharbor/Dropbox/Mac/Documents/aax-sdk-2-4-0/Interfaces/ACF/acfextras.h \
-  /Users/stevenharbor/Dropbox/Mac/Documents/aax-sdk-2-4-0/Interfaces/ACF/acfassert.h
+  /Volumes/iMacPro_Ext/Local_Storage/8Dio/JUCE_CI/CI_CMake_Test/SDKs/AAX_SDK/Interfaces/ACF/CACFClassFactory.cpp \
+  /Volumes/iMacPro_Ext/Local_Storage/8Dio/JUCE_CI/CI_CMake_Test/SDKs/AAX_SDK/Interfaces/ACF/CACFClassFactory.h \
+  /Volumes/iMacPro_Ext/Local_Storage/8Dio/JUCE_CI/CI_CMake_Test/SDKs/AAX_SDK/Interfaces/ACF/CACFUnknown.h \
+  /Volumes/iMacPro_Ext/Local_Storage/8Dio/JUCE_CI/CI_CMake_Test/SDKs/AAX_SDK/Interfaces/ACF/acfbaseapi.h \
+  /Volumes/iMacPro_Ext/Local_Storage/8Dio/JUCE_CI/CI_CMake_Test/SDKs/AAX_SDK/Interfaces/ACF/acfbasetypes.h \
+  /Volumes/iMacPro_Ext/Local_Storage/8Dio/JUCE_CI/CI_CMake_Test/SDKs/AAX_SDK/Interfaces/ACF/acfunknown.h \
+  /Volumes/iMacPro_Ext/Local_Storage/8Dio/JUCE_CI/CI_CMake_Test/SDKs/AAX_SDK/Interfaces/ACF/defineacfuid.h \
+  /Volumes/iMacPro_Ext/Local_Storage/8Dio/JUCE_CI/CI_CMake_Test/SDKs/AAX_SDK/Interfaces/ACF/acfresult.h \
+  /Volumes/iMacPro_Ext/Local_Storage/8Dio/JUCE_CI/CI_CMake_Test/SDKs/AAX_SDK/Interfaces/ACF/acfextras.h \
+  /Volumes/iMacPro_Ext/Local_Storage/8Dio/JUCE_CI/CI_CMake_Test/SDKs/AAX_SDK/Interfaces/ACF/acfassert.h

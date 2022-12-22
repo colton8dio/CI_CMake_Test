@@ -3709,6 +3709,8 @@
     \subitem {AAX\_Version.h}, \hyperpage{1351}
   \item {AAX\_SDK\_2p4p0\_REVISION}
     \subitem {AAX\_Version.h}, \hyperpage{1351}
+  \item {AAX\_SDK\_2p4p1\_REVISION}
+    \subitem {AAX\_Version.h}, \hyperpage{1351}
   \item {AAX\_SDK\_ChangeLog.doxygen}, \hyperpage{1325}
   \item {AAX\_SDK\_CURRENT\_REVISION}
     \subitem {AAX\_Version.h}, \hyperpage{1349}
@@ -4056,6 +4058,7 @@
     \subitem {AAX\_SDK\_2p3p1\_REVISION}, \hyperpage{1351}
     \subitem {AAX\_SDK\_2p3p2\_REVISION}, \hyperpage{1351}
     \subitem {AAX\_SDK\_2p4p0\_REVISION}, \hyperpage{1351}
+    \subitem {AAX\_SDK\_2p4p1\_REVISION}, \hyperpage{1351}
     \subitem {AAX\_SDK\_CURRENT\_REVISION}, \hyperpage{1349}
     \subitem {AAX\_SDK\_VERSION}, \hyperpage{1348}
   \item {AAX\_VFeatureInfo}, \hyperpage{1089}

@@ -1,17 +1,17 @@
 dependencies: \
-  /Users/stevenharbor/Dropbox/Mac/Documents/aax-sdk-2-4-0/Libs/AAXLibrary/source/AAX_SliderConversions.cpp \
-  /Users/stevenharbor/Dropbox/Mac/Documents/aax-sdk-2-4-0/Interfaces/AAX_SliderConversions.h \
-  /Users/stevenharbor/Dropbox/Mac/Documents/aax-sdk-2-4-0/Interfaces/AAX.h \
-  /Users/stevenharbor/Dropbox/Mac/Documents/aax-sdk-2-4-0/Interfaces/AAX_Version.h \
-  /Users/stevenharbor/Dropbox/Mac/Documents/aax-sdk-2-4-0/Interfaces/AAX_Enums.h \
-  /Users/stevenharbor/Dropbox/Mac/Documents/aax-sdk-2-4-0/Interfaces/AAX_Errors.h \
-  /Users/stevenharbor/Dropbox/Mac/Documents/aax-sdk-2-4-0/Interfaces/AAX_Properties.h \
-  /Users/stevenharbor/Dropbox/Mac/Documents/aax-sdk-2-4-0/Interfaces/AAX_PreStructAlignmentHelper.h \
-  /Users/stevenharbor/Dropbox/Mac/Documents/aax-sdk-2-4-0/Interfaces/AAX_Push8ByteStructAlignment.h \
-  /Users/stevenharbor/Dropbox/Mac/Documents/aax-sdk-2-4-0/Interfaces/AAX_PostStructAlignmentHelper.h \
-  /Users/stevenharbor/Dropbox/Mac/Documents/aax-sdk-2-4-0/Interfaces/AAX_PopStructAlignment.h \
-  /Users/stevenharbor/Dropbox/Mac/Documents/aax-sdk-2-4-0/Interfaces/AAX_UtilsNative.h \
-  /Users/stevenharbor/Dropbox/Mac/Documents/aax-sdk-2-4-0/Interfaces/AAX_CString.h \
-  /Users/stevenharbor/Dropbox/Mac/Documents/aax-sdk-2-4-0/Interfaces/AAX_IString.h \
-  /Users/stevenharbor/Dropbox/Mac/Documents/aax-sdk-2-4-0/Interfaces/AAX_Assert.h \
-  /Users/stevenharbor/Dropbox/Mac/Documents/aax-sdk-2-4-0/Interfaces/AAX_CHostServices.h
+  /Volumes/iMacPro_Ext/Local_Storage/8Dio/JUCE_CI/CI_CMake_Test/SDKs/AAX_SDK/Libs/AAXLibrary/source/AAX_SliderConversions.cpp \
+  /Volumes/iMacPro_Ext/Local_Storage/8Dio/JUCE_CI/CI_CMake_Test/SDKs/AAX_SDK/Interfaces/AAX_SliderConversions.h \
+  /Volumes/iMacPro_Ext/Local_Storage/8Dio/JUCE_CI/CI_CMake_Test/SDKs/AAX_SDK/Interfaces/AAX.h \
+  /Volumes/iMacPro_Ext/Local_Storage/8Dio/JUCE_CI/CI_CMake_Test/SDKs/AAX_SDK/Interfaces/AAX_Version.h \
+  /Volumes/iMacPro_Ext/Local_Storage/8Dio/JUCE_CI/CI_CMake_Test/SDKs/AAX_SDK/Interfaces/AAX_Enums.h \
+  /Volumes/iMacPro_Ext/Local_Storage/8Dio/JUCE_CI/CI_CMake_Test/SDKs/AAX_SDK/Interfaces/AAX_Errors.h \
+  /Volumes/iMacPro_Ext/Local_Storage/8Dio/JUCE_CI/CI_CMake_Test/SDKs/AAX_SDK/Interfaces/AAX_Properties.h \
+  /Volumes/iMacPro_Ext/Local_Storage/8Dio/JUCE_CI/CI_CMake_Test/SDKs/AAX_SDK/Interfaces/AAX_PreStructAlignmentHelper.h \
+  /Volumes/iMacPro_Ext/Local_Storage/8Dio/JUCE_CI/CI_CMake_Test/SDKs/AAX_SDK/Interfaces/AAX_Push8ByteStructAlignment.h \
+  /Volumes/iMacPro_Ext/Local_Storage/8Dio/JUCE_CI/CI_CMake_Test/SDKs/AAX_SDK/Interfaces/AAX_PostStructAlignmentHelper.h \
+  /Volumes/iMacPro_Ext/Local_Storage/8Dio/JUCE_CI/CI_CMake_Test/SDKs/AAX_SDK/Interfaces/AAX_PopStructAlignment.h \
+  /Volumes/iMacPro_Ext/Local_Storage/8Dio/JUCE_CI/CI_CMake_Test/SDKs/AAX_SDK/Interfaces/AAX_UtilsNative.h \
+  /Volumes/iMacPro_Ext/Local_Storage/8Dio/JUCE_CI/CI_CMake_Test/SDKs/AAX_SDK/Interfaces/AAX_CString.h \
+  /Volumes/iMacPro_Ext/Local_Storage/8Dio/JUCE_CI/CI_CMake_Test/SDKs/AAX_SDK/Interfaces/AAX_IString.h \
+  /Volumes/iMacPro_Ext/Local_Storage/8Dio/JUCE_CI/CI_CMake_Test/SDKs/AAX_SDK/Interfaces/AAX_Assert.h \
+  /Volumes/iMacPro_Ext/Local_Storage/8Dio/JUCE_CI/CI_CMake_Test/SDKs/AAX_SDK/Interfaces/AAX_CHostServices.h

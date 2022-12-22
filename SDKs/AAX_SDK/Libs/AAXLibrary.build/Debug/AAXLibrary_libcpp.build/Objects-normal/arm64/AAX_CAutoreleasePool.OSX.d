@@ -1,3 +1,3 @@
 dependencies: \
-  /Users/stevenharbor/Dropbox/Mac/Documents/aax-sdk-2-4-0/Libs/AAXLibrary/source/AAX_CAutoreleasePool.OSX.mm \
-  /Users/stevenharbor/Dropbox/Mac/Documents/aax-sdk-2-4-0/Interfaces/AAX_CAutoreleasePool.h
+  /Volumes/iMacPro_Ext/Local_Storage/8Dio/JUCE_CI/CI_CMake_Test/SDKs/AAX_SDK/Libs/AAXLibrary/source/AAX_CAutoreleasePool.OSX.mm \
+  /Volumes/iMacPro_Ext/Local_Storage/8Dio/JUCE_CI/CI_CMake_Test/SDKs/AAX_SDK/Interfaces/AAX_CAutoreleasePool.h

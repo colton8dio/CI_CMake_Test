@@ -1,2 +1,0 @@
-Target dependency graph (1 target)
-AAXLibrary_libcpp in AAXLibrary, no dependencies
