@@ -5,7 +5,7 @@ on:
   #Runs when a push on main branch is made.
   push:
     branches:
-    - main
+    - dev
 
 # When pushing new commits, cancel any running builds on that branch
 concurrency:
