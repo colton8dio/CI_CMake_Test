@@ -9,7 +9,7 @@
     },
     "size": {
       "width": 730,
-      "height": 520
+      "height": 800
     }
   },
   "format": "UDZO",
@@ -22,7 +22,7 @@
     { "x": 480, "y": 275, "type": "file", "path": "dmg/Your Mac's VST Folder" },
     { "x": 250, "y": 125, "type": "file", "path": "dmg/CI_CMake_Test.component" },
     { "x": 480, "y": 125, "type": "file", "path": "dmg/Your Mac's Component Folder" },
-    { "x": 250, "y": 0, "type": "file", "path": "dmg/CI_CMake_Test.app" },
-    { "x": 480, "y": 0, "type": "file", "path": "dmg/Your Mac's Desktop Folder" }
+    { "x": 250, "y": 100, "type": "file", "path": "dmg/CI_CMake_Test.app" },
+    { "x": 480, "y": 100, "type": "file", "path": "dmg/Your Mac's Desktop Folder" }
   ]
 }
