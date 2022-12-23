@@ -238,6 +238,5 @@ jobs:
 
     - name: Delete keychain
       if: ${{ matrix.name == 'macOS' }}
-      if: always() # Always run this step to ensure the keychain is properly disposed of
       run: |
         security delete-keychain "${{ env.KEYCHAIN }}".keychain
