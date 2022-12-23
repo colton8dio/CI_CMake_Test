@@ -122,13 +122,19 @@ jobs:
 
   # Sign AAX with the crazy PACE tools
   # This needs an absolute path at end of command
-  #'/Applications/PACEAntiPiracy/Eden/Fusion/Versions/5/bin/wraptool' sign --verbose --allowsigningservice --dsigharden --account ${{ secrets.ILOK_USERNAME }} --password ${{ secrets.ILOK_PASSWORD }} --signid "${{ secrets.DEVELOPER_ID_APPLICATION}}" --keypassword “${{ secrets.DEV_ID_APP_PASSWORD }}”  --wcguid "${{ secrets.WCGUID }}" --in “/Library/Application\ Support/Avid/Audio/Plug-Ins/CI_CMake_Test.aaxplugin" --out “Users/ColtonDodd/Documents/actions-runner/_work/CI_CMake_Test/CI_CMake_Test/Builds/CI_CMake_Test_artefacts/Release/AAX/CI_CMake_Test.aaxplugin"
-  #/Applications/PACEAntiPiracy/Eden/Fusion/Versions/5/bin/wraptool sign --verbose --account ${{ secrets.ILOK_USERNAME }} --signid "${{ secrets.DEVELOPER_ID_APPLICATION}}" --wcguid ${{ secrets.WCGUID }} --in /Users/ColtonDodd/Documents/actions-runner/_work/CI_CMake_Test/CI_CMake_Test/Builds/CI_CMake_Test_artefacts/Release/AAX/CI_CMake_Test.aaxplugin --out /Users/ColtonDodd/Documents/actions-runner/_work/CI_CMake_Test/CI_CMake_Test/Builds/CI_CMake_Test_artefacts/Release/AAX/CI_CMake_Test.aaxplugin --autoinstall on -headerpad
     - name: AAX Signing (macOS)
       if: ${{ matrix.name == 'macOS' }}
       run: |
         /Applications/PACEAntiPiracy/Eden/Fusion/Versions/5/bin/wraptool sign --verbose --allowsigningservice --account ${{ secrets.ILOK_USERNAME }} --signid "${{ secrets.DEVELOPER_ID_APPLICATION}}" --wcguid ${{ secrets.WCGUID }} --in /Users/ColtonDodd/Documents/actions-runner/_work/CI_CMake_Test/CI_CMake_Test/Builds/CI_CMake_Test_artefacts/Release/AAX/CI_CMake_Test.aaxplugin --out /Users/ColtonDodd/Documents/actions-runner/_work/CI_CMake_Test/CI_CMake_Test/Builds/CI_CMake_Test_artefacts/Release/AAX/CI_CMake_Test.aaxplugin --autoinstall on
         /Applications/PACEAntiPiracy/Eden/Fusion/Versions/5/bin/wraptool verify --verbose --in /Users/ColtonDodd/Documents/actions-runner/_work/CI_CMake_Test/CI_CMake_Test/Builds/CI_CMake_Test_artefacts/Release/AAX/CI_CMake_Test.aaxplugin
+
+  #pathto\wraptool sign --verbose --account “ilokusername” (--password “ilokpassword” )--in “pathto\Soundpaint.aaxplugin" --out "Soundpaint.aaxplugin" --keyfile “pathto\Certificates.p12” --keypassword “applepassword” --wcguid “FC40D120-B9DD-11EC-8D2C-005056920FF7”
+    - name: AAX Signing (Windows)
+      if: ${{ matrix.name == 'Windows' }}
+      shell: pwsh
+      run: |
+        wraptool sign --verbose --allowsigningservice --account ${{ secrets.ILOK_USERNAME }} --keyfile “C:\Users\Colton.DESKTOP-L3D8I91\Desktop\8Dio_Cert.p12” --keypassword ${{ secrets.DEV_ID_APP_PASSWORD }} --wcguid ${{ secrets.WCGUID }} --in C:\Users\Colton.DESKTOP-L3D8I91\actions-runner\_work\CI_CMake_Test\CI_CMake_Test\Builds\CI_CMake_Test_artefacts\Release\AAX\CI_CMake_Test.aaxplugin --out C:\Users\Colton.DESKTOP-L3D8I91\actions-runner\_work\CI_CMake_Test\CI_CMake_Test\Builds\CI_CMake_Test_artefacts\Release\AAX\CI_CMake_Test.aaxplugin --autoinstall on
+        wraptool verify --verbose --in C:\Users\Colton.DESKTOP-L3D8I91\actions-runner\_work\CI_CMake_Test\CI_CMake_Test\Builds\CI_CMake_Test_artefacts\Release\AAX\CI_CMake_Test.aaxplugin
 
   # For 7z command - brew install p7zip
   # Pluginval on Windows isn't compatible with Ninja.
