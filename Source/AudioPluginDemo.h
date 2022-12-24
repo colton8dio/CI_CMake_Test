@@ -269,7 +269,7 @@ public:
     }
 
     //==============================================================================
-    const String getName() const override                             { return "AudioPluginDemo"; }
+    const String getName() const override                             { return "CI_CMake_Test"; }
     bool acceptsMidi() const override                                 { return true; }
     bool producesMidi() const override                                { return true; }
     double getTailLengthSeconds() const override                      { return 0.0; }
