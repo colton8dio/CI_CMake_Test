@@ -139,7 +139,6 @@ jobs:
   # For 7z command - brew install p7zip
   # Pluginval on Windows isn't compatible with Ninja.
     - name: Pluginval (macOS)
-      if: ${{ matrix.name == 'macOS' }}
       working-directory: ${{ env.BUILD_DIR }}
       shell: bash
       run: |
