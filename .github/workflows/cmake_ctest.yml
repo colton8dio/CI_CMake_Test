@@ -194,7 +194,7 @@ jobs:
         SetFile -a C ${{ env.VST3_PATH }}
         SetFile -a C ${{ env.Mac_VST_PATH }}
         SetFile -a C ${{ env.AU_PATH }}
-        SetFile -a C ${{ env.Mac_AAX_PATH }}
+        SetFile -a C ${{ env.Mac_AAX_DIR }}
 
       # You'll need an account with NPM to install and use this. https://www.npmjs.com/signup (maybe add this to Install macOS Deps) Check mac dependencies section
     - name: Create DMG, Notarize and Staple (macOS)
