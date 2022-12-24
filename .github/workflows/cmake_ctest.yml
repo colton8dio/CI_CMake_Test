@@ -76,6 +76,7 @@ jobs:
         echo "AU_PATH=${{ env.PROJECT_NAME }}_artefacts/${{ env.BUILD_TYPE }}/AU/${{ env.PROJECT_NAME }}.component" >> $GITHUB_ENV
         #echo "AUV3_PATH=${{ env.PROJECT_NAME }}_artefacts/${{ env.BUILD_TYPE }}/AUv3/${{ env.PROJECT_NAME }}.appex" >> $GITHUB_ENV
         echo "Standalone_PATH=${{ env.PROJECT_NAME }}_artefacts/${{ env.BUILD_TYPE }}/Standalone/${{ env.PROJECT_NAME }}.app" >> $GITHUB_ENV
+        echo "Mac_AAX_DIR=${{ env.PROJECT_NAME }}_artefacts/${{ env.BUILD_TYPE }}/AAX/${{ env.PROJECT_NAME }}.aaxplugin" >> $GITHUB_ENV
         echo "Mac_AAX_PATH=${{ env.BUILD_DIR }}/${{ env.PROJECT_NAME }}_artefacts/${{ env.BUILD_TYPE }}/AAX/CI_CMake_Test.aaxplugin" >> $GITHUB_ENV
         echo "Windows_AAX_PATH=${{ env.BUILD_DIR }}/${{ env.PROJECT_NAME }}_artefacts/${{ env.BUILD_TYPE }}/AAX/CI_CMake_Test.aaxplugin/Contents/x64/${{ env.PROJECT_NAME }}.aaxplugin" >> $GITHUB_ENV
         echo "PRODUCT_NAME=${{ env.PROJECT_NAME }}-$VERSION-${{ matrix.name }}" >> $GITHUB_ENV
@@ -187,7 +188,7 @@ jobs:
         Rez -a /tmp/icons -o ${{ env.VST3_PATH }}/Icon$'\r'
         Rez -a /tmp/icons -o ${{ env.Mac_VST_PATH }}/Icon$'\r'
         Rez -a /tmp/icons -o ${{ env.AU_PATH }}/Icon$'\r'
-        Rez -a /tmp/icons -o ${{ env.Mac_AAX_PATH }}/Icon$'\r'
+        Rez -a /tmp/icons -o ${{ env.Mac_AAX_DIR }}/Icon$'\r'
 
         # Set custom icon attribute
         SetFile -a C ${{ env.VST3_PATH }}
