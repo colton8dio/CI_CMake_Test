@@ -72,11 +72,13 @@ jobs:
         echo "ARTIFACTS_PATH=${{ env.BUILD_DIR }}/${{ env.PROJECT_NAME }}_artefacts/${{ env.BUILD_TYPE }}" >> $GITHUB_ENV
         echo "VST3_PATH=${{ env.PROJECT_NAME }}_artefacts/${{ env.BUILD_TYPE }}/VST3/${{ env.PROJECT_NAME }}.vst3" >> $GITHUB_ENV
         echo "VST_PATH=${{ env.PROJECT_NAME }}_artefacts/${{ env.BUILD_TYPE }}/VST/${{ env.PROJECT_NAME }}.vst" >> $GITHUB_ENV
+        echo "Windows_VST_PATH=${{ env.PROJECT_NAME }}_artefacts/${{ env.BUILD_TYPE }}/VST/${{ env.PROJECT_NAME }}.dll" >> $GITHUB_ENV
         echo "AU_PATH=${{ env.PROJECT_NAME }}_artefacts/${{ env.BUILD_TYPE }}/AU/${{ env.PROJECT_NAME }}.component" >> $GITHUB_ENV
         echo "AAX_PATH=${{ env.PROJECT_NAME }}_artefacts/${{ env.BUILD_TYPE }}/AAX/${{ env.PROJECT_NAME }}.aaxplugin" >> $GITHUB_ENV
         echo "AUV3_PATH=${{ env.PROJECT_NAME }}_artefacts/${{ env.BUILD_TYPE }}/AUv3/${{ env.PROJECT_NAME }}.appex" >> $GITHUB_ENV
         echo "Standalone_PATH=${{ env.PROJECT_NAME }}_artefacts/${{ env.BUILD_TYPE }}/Standalone/${{ env.PROJECT_NAME }}.app" >> $GITHUB_ENV
         echo "PRODUCT_NAME=${{ env.PROJECT_NAME }}-$VERSION-${{ matrix.name }}" >> $GITHUB_ENV
+        echo "Windows_Pluginval=C:\ProgramData\chocolatey\lib\pluginval\tools\pluginval.exe" >> $GITHUB_ENV
 
       # A cache compiler to speed up build times. https://github.com/ccache/ccache
     - name: ccache
@@ -139,6 +141,7 @@ jobs:
   # For 7z command - brew install p7zip
   # Pluginval on Windows isn't compatible with Ninja.
     - name: Pluginval (macOS)
+      if: ${{ matrix.name == 'macOS' }}
       working-directory: ${{ env.BUILD_DIR }}
       shell: bash
       run: |
@@ -147,6 +150,14 @@ jobs:
         ${{ matrix.pluginval-binary }} --strictness-level 10 --verbose --validate "${{ env.VST3_PATH }}"
         ${{ matrix.pluginval-binary }} --strictness-level 10 --verbose --validate "${{ env.VST_PATH }}"
         ${{ matrix.pluginval-binary }} --strictness-level 10 --verbose --validate "${{ env.AU_PATH }}"
+
+      - name: Pluginval (Windows)
+        if: ${{ matrix.name == 'Windows' }}
+        working-directory: ${{ env.BUILD_DIR }}
+        shell: pwsh
+        run: |
+          ${{ env.Windows_Pluginval }} --strictness-level 10 --verbose --validate "${{ env.Windows_VST_PATH }}"
+          ${{ env.Windows_Pluginval }} --strictness-level 10 --verbose --validate "${{ env.VST3_PATH }}"
 
   # Need code signing stuff or will get error. Releated to -name Import Certificates (macOS)
     - name: Codesign (macOS)
