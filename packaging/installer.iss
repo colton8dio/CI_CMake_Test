@@ -39,7 +39,7 @@ UsePreviousAppDir=yes
 UninstallFilesDir="{code:GetDir|0}"
 
 [Files]
-Source: C:\Users\Colton.DESKTOP-L3D8I91\actions-runner\_work\CI_CMake_Test\CI_CMake_Test\Builds\CI_CMake_Test_artefacts\Release\VST3\CI_CMake_Test.vst3\Contents\x86-win\CI_CMake_Test.vst3; DestDir: "{autocf}\VST3"; Flags: ignoreversion
+Source: C:\Users\Colton.DESKTOP-L3D8I91\actions-runner\_work\CI_CMake_Test\CI_CMake_Test\Builds\CI_CMake_Test_artefacts\Release\VST3\CI_CMake_Test.vst3\Contents\x86_64-win\CI_CMake_Test.vst3; DestDir: "{autocf}\VST3"; Flags: ignoreversion
 Source: C:\Users\Colton.DESKTOP-L3D8I91\actions-runner\_work\CI_CMake_Test\CI_CMake_Test\Builds\CI_CMake_Test_artefacts\Release\VST\CI_CMake_Test.dll; DestDir: "{autocf}\VST"; Flags: ignoreversion
 Source: C:\Users\Colton.DESKTOP-L3D8I91\actions-runner\_work\CI_CMake_Test\CI_CMake_Test\Builds\CI_CMake_Test_artefacts\Release\AAX\CI_CMake_Test.aaxplugin\Contents\x64\CI_CMake_Test.aaxplugin; DestDir: "{autocf}\AAX"; Flags: ignoreversion
 Source: C:\Users\Colton.DESKTOP-L3D8I91\actions-runner\_work\CI_CMake_Test\CI_CMake_Test\Builds\CI_CMake_Test_artefacts\Release\Standalone\CI_CMake_Test.exe; DestDir: "{code:GetDir|0}"; Flags: ignoreversion
