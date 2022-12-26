@@ -77,11 +77,11 @@ jobs:
         #echo "AUV3_PATH=${{ env.PROJECT_NAME }}_artefacts/${{ env.BUILD_TYPE }}/AUv3/${{ env.PROJECT_NAME }}.appex" >> $GITHUB_ENV
         echo "Standalone_PATH=${{ env.PROJECT_NAME }}_artefacts/${{ env.BUILD_TYPE }}/Standalone/${{ env.PROJECT_NAME }}.app" >> $GITHUB_ENV
         echo "Mac_AAX_DIR=${{ env.PROJECT_NAME }}_artefacts/${{ env.BUILD_TYPE }}/AAX/${{ env.PROJECT_NAME }}.aaxplugin" >> $GITHUB_ENV
-        echo "Mac_AAX_PATH=${{ env.BUILD_DIR }}/${{ env.PROJECT_NAME }}_artefacts/${{ env.BUILD_TYPE }}/AAX/CI_CMake_Test.aaxplugin" >> $GITHUB_ENV
-        echo "Windows_AAX_PATH=${{ env.BUILD_DIR }}/${{ env.PROJECT_NAME }}_artefacts/${{ env.BUILD_TYPE }}/AAX/CI_CMake_Test.aaxplugin/Contents/x64/${{ env.PROJECT_NAME }}.aaxplugin" >> $GITHUB_ENV
-        echo "PRODUCT_NAME=${{ env.PROJECT_NAME }}-$VERSION-${{ matrix.name }}" >> $GITHUB_ENV
+        echo "Mac_AAX_PATH=${{ env.BUILD_DIR }}/${{ env.PROJECT_NAME }}_artefacts/${{ env.BUILD_TYPE }}/AAX/${{ env.PROJECT_NAME }}.aaxplugin" >> $GITHUB_ENV
+        echo "Windows_AAX_PATH=${{ env.BUILD_DIR }}/${{ env.PROJECT_NAME }}_artefacts/${{ env.BUILD_TYPE }}/AAX/${{ env.PROJECT_NAME }}.aaxplugin/Contents/x64/${{ env.PROJECT_NAME }}.aaxplugin" >> $GITHUB_ENV
         echo "Windows_Pluginval=C:\ProgramData\chocolatey\lib\pluginval\tools\pluginval.exe" >> $GITHUB_ENV
         echo "Mac_Wraptool_PATH=/Applications/PACEAntiPiracy/Eden/Fusion/Versions/5/bin/wraptool" >> $GITHUB_ENV
+        echo "PRODUCT_NAME=${{ env.PROJECT_NAME }}-$VERSION-${{ matrix.name }}" >> $GITHUB_ENV
 
       # A cache compiler to speed up build times. https://github.com/ccache/ccache
     - name: ccache
@@ -179,10 +179,10 @@ jobs:
       working-directory: ${{ env.BUILD_DIR }}
       run: |
         # add the icns as its own icon resource (meta!)
-        sips -i ../packaging/CI_CMake_Test.icns
+        sips -i ../packaging/${{ env.PROJECT_NAME }}.icns
 
         # Grab the resource, put in tempfile
-        DeRez -only icns ../packaging/CI_CMake_Test.icns > /tmp/icons
+        DeRez -only icns ../packaging/${{ env.PROJECT_NAME }}.icns > /tmp/icons
 
         # Stuff the resource into the strange Icon? file's resource fork
         Rez -a /tmp/icons -o ${{ env.VST3_PATH }}/Icon$'\r'
@@ -221,6 +221,18 @@ jobs:
         codesign -s "${{ secrets.DEVELOPER_ID_APPLICATION}}" --timestamp -i com.jucetest.jucetest --force ${{ env.PRODUCT_NAME }}.dmg
         xcrun notarytool submit ${{ env.PRODUCT_NAME }}.dmg --apple-id ${{ secrets.NOTARIZATION_USERNAME }} --password ${{ secrets.NOTARIZATION_PASSWORD }} --team-id ${{ secrets.TEAM_ID }} --wait
         xcrun stapler staple ${{ env.PRODUCT_NAME }}.dmg
+
+    - name: Create .pkg, Notarize and Staple (macOS)
+      if: ${{ matrix.name == 'macOS' }}
+      run: |
+        cd packaging
+        #run package maker
+        /usr/local/bin/packagesbuild --project ${{ env.PROJECT_NAME }}Installer.pkgproj
+        mv ${{ env.PROJECT_NAME }}.pkg ${{ env.PRODUCT_NAME}}.pkg
+
+        codesign -s "${{ secrets.DEVELOPER_ID_APPLICATION}}" --timestamp -i com.jucetest.jucetest --force ${{ env.PRODUCT_NAME }}.pkg
+        xcrun notarytool submit ${{ env.PRODUCT_NAME }}.pkg --apple-id ${{ secrets.NOTARIZATION_USERNAME }} --password ${{ secrets.NOTARIZATION_PASSWORD }} --team-id ${{ secrets.TEAM_ID }} --wait
+        xcrun stapler staple ${{ env.PRODUCT_NAME }}.pkg
 
     - name: Generate Installer and Sign with EV cert on Azure (Windows)
       if: ${{ matrix.name == 'Windows' }}
