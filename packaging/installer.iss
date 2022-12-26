@@ -41,7 +41,9 @@ UninstallFilesDir="{code:GetDir|0}"
 [Files]
 Source: C:\Users\Colton.DESKTOP-L3D8I91\actions-runner\_work\CI_CMake_Test\CI_CMake_Test\Builds\CI_CMake_Test_artefacts\Release\VST3\CI_CMake_Test.vst3\Contents\x86_64-win\CI_CMake_Test.vst3; DestDir: "{autocf}\VST3"; Flags: ignoreversion
 Source: C:\Users\Colton.DESKTOP-L3D8I91\actions-runner\_work\CI_CMake_Test\CI_CMake_Test\Builds\CI_CMake_Test_artefacts\Release\VST\CI_CMake_Test.dll; DestDir: "{autocf}\VST"; Flags: ignoreversion
-Source: C:\Users\Colton.DESKTOP-L3D8I91\actions-runner\_work\CI_CMake_Test\CI_CMake_Test\Builds\CI_CMake_Test_artefacts\Release\AAX\CI_CMake_Test.aaxplugin\Contents\x64\CI_CMake_Test.aaxplugin; DestDir: "{autocf}\AAX"; Flags: ignoreversion
+Source: C:\Users\Colton.DESKTOP-L3D8I91\actions-runner\_work\CI_CMake_Test\CI_CMake_Test\Builds\CI_CMake_Test_artefacts\Release\AAX\CI_CMake_Test.aaxplugin\Contents\x64\*; DestDir: "{autocf}\Avid\Audio\Plug-Ins\CI_CMake_Test.aaxplugin\Contents\x64"; Flags: ignoreversion
+;Source: C:\Users\Colton.DESKTOP-L3D8I91\actions-runner\_work\CI_CMake_Test\CI_CMake_Test\Builds\CI_CMake_Test_artefacts\Release\AAX\CI_CMake_Test.aaxplugin\Contents\*; DestDir: "{autocf}\Avid\Audio\Pug-Ins\CI_CMake_Test.aaxplugin\Contents\Resources"; Flags: ignoreversion
+;Source: C:\Users\Colton.DESKTOP-L3D8I91\actions-runner\_work\CI_CMake_Test\CI_CMake_Test\Builds\CI_CMake_Test_artefacts\Release\AAX\CI_CMake_Test.aaxplugin\Contents\Win32; DestDir: "{autocf}\Avid\Audoi\Pug-Ins\CI_CMake_Test.aaxplugin\Contents\Win32"; Flags: ignoreversion
 Source: C:\Users\Colton.DESKTOP-L3D8I91\actions-runner\_work\CI_CMake_Test\CI_CMake_Test\Builds\CI_CMake_Test_artefacts\Release\Standalone\CI_CMake_Test.exe; DestDir: "{code:GetDir|0}"; Flags: ignoreversion
 
 [Code]
@@ -60,6 +62,7 @@ begin
   { add directory input page items }
   DirPage.Add('Standalone, Editor, and Downloader desktop apps');
   DirPage.Add('VST2 Plugin');
+
 
   { assign default directories for the items from the previously stored data; if }
   { there are no data stored from the previous installation, use default folders }
