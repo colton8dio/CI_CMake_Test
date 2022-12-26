@@ -222,12 +222,13 @@ jobs:
         xcrun notarytool submit ${{ env.PRODUCT_NAME }}.dmg --apple-id ${{ secrets.NOTARIZATION_USERNAME }} --password ${{ secrets.NOTARIZATION_PASSWORD }} --team-id ${{ secrets.TEAM_ID }} --wait
         xcrun stapler staple ${{ env.PRODUCT_NAME }}.dmg
 
+      #You need to install the packaging app. http://s.sudre.free.fr/Software/documentation/Packages/en_2017/index.html
     - name: Create .pkg, Notarize and Staple (macOS)
       if: ${{ matrix.name == 'macOS' }}
       run: |
         cd packaging
         #run package maker
-        /usr/local/bin/packagesbuild --project ${{ env.PROJECT_NAME }}Installer.pkgproj
+        /usr/local/bin/packagesbuild --project ${{ env.PROJECT_NAME }}_MacInstaller.pkgproj
         mv ${{ env.PROJECT_NAME }}.pkg ${{ env.PRODUCT_NAME}}.pkg
 
         codesign -s "${{ secrets.DEVELOPER_ID_APPLICATION}}" --timestamp -i com.jucetest.jucetest --force ${{ env.PRODUCT_NAME }}.pkg
@@ -260,6 +261,13 @@ jobs:
       with:
         name: ${{ env.PRODUCT_NAME }}.dmg
         path: packaging/${{ env.PRODUCT_NAME }}.dmg
+
+    - name: Upload DMG (MacOS)
+      if: ${{ matrix.name == 'macOS' }}d
+      uses: actions/upload-artifact@v3
+      with:
+        name: ${{ env.PRODUCT_NAME }}.pkg
+        path: packaging/${{ env.PRODUCT_NAME }}.pkg
 
     - name: Delete keychain
       if: ${{ matrix.name == 'macOS' }}
