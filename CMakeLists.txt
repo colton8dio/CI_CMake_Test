@@ -50,7 +50,6 @@ juce_add_plugin("${PROJECT_NAME}"
     ICON_SMALL packaging/icon.png
     COMPANY_NAME JUCE
     BUNDLE_ID com.8dio.Soundpaint
-    AAX_CATEGORY AAX_ePlugInCategory_None
     IS_SYNTH TRUE                               # Is this a synth or an effect?
     NEEDS_MIDI_INPUT TRUE                       # Does the plugin need midi input?
     NEEDS_MIDI_OUTPUT TRUE                      # Does the plugin need midi output?
