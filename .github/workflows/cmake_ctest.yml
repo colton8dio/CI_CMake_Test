@@ -118,7 +118,7 @@ jobs:
 
     - name: Build (Windows)
       if: ${{ matrix.name == 'Windows' }}
-      shell: pwsh
+      shell: powershell
       run: cmake --build ${{ env.BUILD_DIR }} --config ${{ env.BUILD_TYPE }} --parallel 4
 
     - name: Test
@@ -136,7 +136,7 @@ jobs:
   #pathto\wraptool sign --verbose --account “ilokusername” (--password “ilokpassword” )--in “pathto\Soundpaint.aaxplugin" --out "Soundpaint.aaxplugin" --keyfile “pathto\Certificates.p12” --keypassword “applepassword” --wcguid “FC40D120-B9DD-11EC-8D2C-005056920FF7”
     - name: AAX Signing (Windows)
       if: ${{ matrix.name == 'Windows' }}
-      shell: pwsh
+      shell: powershell
       run: |
         wraptool sign --verbose --allowsigningservice --account ${{ secrets.ILOK_USERNAME }} --password ${{ secrets.ILOK_PASSWORD }} --keyfile “C:\Users\Colton.DESKTOP-L3D8I91\Desktop\8Dio_Cert.p12” --keypassword ${{ secrets.DEV_ID_APP_PASSWORD }} --wcguid ${{ secrets.WCGUID }} --in ${{ env.Windows_AAX_PATH }} --out ${{ env.Windows_AAX_PATH }} --autoinstall on
         wraptool verify --verbose --in ${{ env.Windows_AAX_PATH }}
@@ -157,7 +157,7 @@ jobs:
     - name: Pluginval (Windows)
       if: ${{ matrix.name == 'Windows' }}
       working-directory: ${{ env.BUILD_DIR }}
-      shell: pwsh
+      shell: powershell
       run: |
         ${{ env.Windows_Pluginval }} --strictness-level 10 --verbose --validate "${{ env.Windows_VST_PATH }}"
         ${{ env.Windows_Pluginval }} --strictness-level 10 --verbose --validate "${{ env.VST3_PATH }}"
