@@ -107,6 +107,7 @@ jobs:
       #ninja has issues with pluginval and/or running in powersehll.
     - name: Configure (Windows)
       if: ${{ matrix.name == 'Windows' }}
+      shell: powershell
       run: cmake -B ${{ env.BUILD_DIR }} -DCMAKE_BUILD_TYPE=${{ env.BUILD_TYPE}} -DCMAKE_C_COMPILER_LAUNCHER=ccache -DCMAKE_CXX_COMPILER_LAUNCHER=ccache .
 
 
