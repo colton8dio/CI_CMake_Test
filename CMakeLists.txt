@@ -8,7 +8,7 @@ set(PROJECT_NAME "CI_CMake_Test")
 
 # Set the plugin formats you'll be building here.
 # Valid formats: AAX Unity VST AU AUv3 Standalone (VST2 = VST)
-set(FORMATS AU VST3 VST Standalone)
+set(FORMATS AU AAX VST3 VST Standalone)
 
 # Reads in VERSION file and sticks in it CURRENT_VERSION variable
 # Be sure the file has no newlines

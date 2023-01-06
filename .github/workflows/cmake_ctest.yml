@@ -128,14 +128,14 @@ jobs:
   # Sign AAX with the crazy PACE tools
   # This needs an absolute path at end of command
     - name: AAX Signing (macOS)
-      if: ${{ matrix.name == 'linux' }}
+      if: ${{ matrix.name == 'macOS' }}
       run: |
         ${{ env.Mac_Wraptool_PATH }} sign --verbose --allowsigningservice --account ${{ secrets.ILOK_USERNAME }} --signid "${{ secrets.DEVELOPER_ID_APPLICATION}}" --wcguid ${{ secrets.WCGUID }} --in ${{ env.Mac_AAX_PATH }} --out ${{ env.Mac_AAX_PATH }} --autoinstall on
         ${{ env.Mac_Wraptool_PATH }} verify --verbose --in ${{ env.Mac_AAX_PATH }}
 
   #pathto\wraptool sign --verbose --account “ilokusername” (--password “ilokpassword” )--in “pathto\Soundpaint.aaxplugin" --out "Soundpaint.aaxplugin" --keyfile “pathto\Certificates.p12” --keypassword “applepassword” --wcguid “FC40D120-B9DD-11EC-8D2C-005056920FF7”
     - name: AAX Signing (Windows)
-      if: ${{ matrix.name == 'linux' }}
+      if: ${{ matrix.name == 'Windows' }}
       shell: powershell
       run: |
         wraptool sign --verbose --allowsigningservice --account ${{ secrets.ILOK_USERNAME }} --password ${{ secrets.ILOK_PASSWORD }} --keyfile “C:\Users\Colton.DESKTOP-L3D8I91\Desktop\8Dio_Cert.p12” --keypassword ${{ secrets.DEV_ID_APP_PASSWORD }} --wcguid ${{ secrets.WCGUID }} --in ${{ env.Windows_AAX_PATH }} --out ${{ env.Windows_AAX_PATH }} --autoinstall on
@@ -188,13 +188,13 @@ jobs:
         Rez -a /tmp/icons -o ${{ env.VST3_PATH }}/Icon$'\r'
         Rez -a /tmp/icons -o ${{ env.Mac_VST_PATH }}/Icon$'\r'
         Rez -a /tmp/icons -o ${{ env.AU_PATH }}/Icon$'\r'
-        #Rez -a /tmp/icons -o ${{ env.Mac_AAX_DIR }}/Icon$'\r'
+        Rez -a /tmp/icons -o ${{ env.Mac_AAX_DIR }}/Icon$'\r'
 
         # Set custom icon attribute
         SetFile -a C ${{ env.VST3_PATH }}
         SetFile -a C ${{ env.Mac_VST_PATH }}
         SetFile -a C ${{ env.AU_PATH }}
-        #SetFile -a C ${{ env.Mac_AAX_DIR }}
+        SetFile -a C ${{ env.Mac_AAX_DIR }}
 
       # You'll need an account with NPM to install and use this. https://www.npmjs.com/signup (maybe add this to Install macOS Deps) Check mac dependencies section
     - name: Create DMG, Notarize and Staple (macOS)
@@ -205,12 +205,12 @@ jobs:
 
         # Create directories for the dmg symlinks
         sudo mkdir -m 755 -p /Library/Audio/Plug-Ins/Components && sudo mkdir -m 755 -p /Library/Audio/Plug-Ins/VST3 && sudo mkdir -m 755 -p /Library/Application\ Support/Avid/Audio/Plug-Ins && sudo mkdir -m 755 -p ~/Desktop
-        #ln -s /Library/Application\ Support/Avid/Audio/Plug-Ins "packaging/dmg/Your Mac's AAX folder"
+        ln -s /Library/Application\ Support/Avid/Audio/Plug-Ins "packaging/dmg/Your Mac's AAX folder"
         ln -s /Library/Audio/Plug-Ins/VST3 "packaging/dmg/Your Mac's VST3 folder"
         ln -s /Library/Audio/Plug-Ins/VST "packaging/dmg/Your Mac's VST folder"
         ln -s /Library/Audio/Plug-Ins/Components "packaging/dmg/Your Mac's Component folder"
         ln -s ~/Desktop "packaging/dmg/Your Mac's Desktop folder"
-        #mv "${{ env.ARTIFACTS_PATH }}/AAX/${{ env.PROJECT_NAME }}.aaxplugin" packaging/dmg
+        mv "${{ env.ARTIFACTS_PATH }}/AAX/${{ env.PROJECT_NAME }}.aaxplugin" packaging/dmg
         mv "${{ env.ARTIFACTS_PATH }}/VST3/${{ env.PROJECT_NAME }}.vst3" packaging/dmg
         mv "${{ env.ARTIFACTS_PATH }}/VST/${{ env.PROJECT_NAME }}.vst" packaging/dmg
         mv "${{ env.ARTIFACTS_PATH }}/AU/${{ env.PROJECT_NAME }}.component" packaging/dmg
@@ -224,7 +224,7 @@ jobs:
 
       #You need to install the packaging app. http://s.sudre.free.fr/Software/documentation/Packages/en_2017/index.html
     - name: Create PKG, Notarize and Staple (macOS)
-      if: ${{ matrix.name == 'linux' }}
+      if: ${{ matrix.name == 'macOS' }}
       run: |
         cd packaging
         #run package maker

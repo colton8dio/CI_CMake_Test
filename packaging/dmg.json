@@ -14,6 +14,8 @@
   },
   "format": "UDZO",
   "contents": [
+    { "x": 250, "y": 690, "type": "file", "path": "dmg/CI_CMake_Test.aaxplugin" },
+    { "x": 480, "y": 690, "type": "file", "path": "dmg/Your Mac's AAX Folder" },
     { "x": 250, "y": 550, "type": "file", "path": "dmg/CI_CMake_Test.vst3" },
     { "x": 480, "y": 550, "type": "file", "path": "dmg/Your Mac's VST3 Folder" },
     { "x": 250, "y": 410, "type": "file", "path": "dmg/CI_CMake_Test.vst" },
