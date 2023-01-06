@@ -188,13 +188,13 @@ jobs:
         Rez -a /tmp/icons -o ${{ env.VST3_PATH }}/Icon$'\r'
         Rez -a /tmp/icons -o ${{ env.Mac_VST_PATH }}/Icon$'\r'
         Rez -a /tmp/icons -o ${{ env.AU_PATH }}/Icon$'\r'
-        Rez -a /tmp/icons -o ${{ env.Mac_AAX_DIR }}/Icon$'\r'
+        #Rez -a /tmp/icons -o ${{ env.Mac_AAX_DIR }}/Icon$'\r'
 
         # Set custom icon attribute
         SetFile -a C ${{ env.VST3_PATH }}
         SetFile -a C ${{ env.Mac_VST_PATH }}
         SetFile -a C ${{ env.AU_PATH }}
-        SetFile -a C ${{ env.Mac_AAX_DIR }}
+        #SetFile -a C ${{ env.Mac_AAX_DIR }}
 
       # You'll need an account with NPM to install and use this. https://www.npmjs.com/signup (maybe add this to Install macOS Deps) Check mac dependencies section
     - name: Create DMG, Notarize and Staple (macOS)
@@ -205,12 +205,12 @@ jobs:
 
         # Create directories for the dmg symlinks
         sudo mkdir -m 755 -p /Library/Audio/Plug-Ins/Components && sudo mkdir -m 755 -p /Library/Audio/Plug-Ins/VST3 && sudo mkdir -m 755 -p /Library/Application\ Support/Avid/Audio/Plug-Ins && sudo mkdir -m 755 -p ~/Desktop
-        ln -s /Library/Application\ Support/Avid/Audio/Plug-Ins "packaging/dmg/Your Mac's AAX folder"
+        #ln -s /Library/Application\ Support/Avid/Audio/Plug-Ins "packaging/dmg/Your Mac's AAX folder"
         ln -s /Library/Audio/Plug-Ins/VST3 "packaging/dmg/Your Mac's VST3 folder"
         ln -s /Library/Audio/Plug-Ins/VST "packaging/dmg/Your Mac's VST folder"
         ln -s /Library/Audio/Plug-Ins/Components "packaging/dmg/Your Mac's Component folder"
         ln -s ~/Desktop "packaging/dmg/Your Mac's Desktop folder"
-        mv "${{ env.ARTIFACTS_PATH }}/AAX/${{ env.PROJECT_NAME }}.aaxplugin" packaging/dmg
+        #mv "${{ env.ARTIFACTS_PATH }}/AAX/${{ env.PROJECT_NAME }}.aaxplugin" packaging/dmg
         mv "${{ env.ARTIFACTS_PATH }}/VST3/${{ env.PROJECT_NAME }}.vst3" packaging/dmg
         mv "${{ env.ARTIFACTS_PATH }}/VST/${{ env.PROJECT_NAME }}.vst" packaging/dmg
         mv "${{ env.ARTIFACTS_PATH }}/AU/${{ env.PROJECT_NAME }}.component" packaging/dmg
