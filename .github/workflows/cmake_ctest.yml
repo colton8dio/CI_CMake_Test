@@ -224,7 +224,7 @@ jobs:
 
       #You need to install the packaging app. http://s.sudre.free.fr/Software/documentation/Packages/en_2017/index.html
     - name: Create PKG, Notarize and Staple (macOS)
-      if: ${{ matrix.name == 'macOS' }}
+      if: ${{ matrix.name == 'linux' }}
       run: |
         cd packaging
         #run package maker
