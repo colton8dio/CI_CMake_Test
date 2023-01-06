@@ -128,14 +128,14 @@ jobs:
   # Sign AAX with the crazy PACE tools
   # This needs an absolute path at end of command
     - name: AAX Signing (macOS)
-      if: ${{ matrix.name == 'macOS' }}
+      if: ${{ matrix.name == 'linux' }}
       run: |
         ${{ env.Mac_Wraptool_PATH }} sign --verbose --allowsigningservice --account ${{ secrets.ILOK_USERNAME }} --signid "${{ secrets.DEVELOPER_ID_APPLICATION}}" --wcguid ${{ secrets.WCGUID }} --in ${{ env.Mac_AAX_PATH }} --out ${{ env.Mac_AAX_PATH }} --autoinstall on
         ${{ env.Mac_Wraptool_PATH }} verify --verbose --in ${{ env.Mac_AAX_PATH }}
 
   #pathto\wraptool sign --verbose --account “ilokusername” (--password “ilokpassword” )--in “pathto\Soundpaint.aaxplugin" --out "Soundpaint.aaxplugin" --keyfile “pathto\Certificates.p12” --keypassword “applepassword” --wcguid “FC40D120-B9DD-11EC-8D2C-005056920FF7”
     - name: AAX Signing (Windows)
-      if: ${{ matrix.name == 'Windows' }}
+      if: ${{ matrix.name == 'linux' }}
       shell: powershell
       run: |
         wraptool sign --verbose --allowsigningservice --account ${{ secrets.ILOK_USERNAME }} --password ${{ secrets.ILOK_PASSWORD }} --keyfile “C:\Users\Colton.DESKTOP-L3D8I91\Desktop\8Dio_Cert.p12” --keypassword ${{ secrets.DEV_ID_APP_PASSWORD }} --wcguid ${{ secrets.WCGUID }} --in ${{ env.Windows_AAX_PATH }} --out ${{ env.Windows_AAX_PATH }} --autoinstall on
