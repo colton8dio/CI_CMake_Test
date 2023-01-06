@@ -130,7 +130,7 @@ jobs:
     - name: AAX Signing (macOS)
       if: ${{ matrix.name == 'macOS' }}
       run: |
-        ${{ env.Mac_Wraptool_PATH }} sign --verbose --allowsigningservice --account ${{ secrets.ILOK_USERNAME }} --signid "${{ secrets.DEVELOPER_ID_APPLICATION}}" --wcguid ${{ secrets.WCGUID }} --in ${{ env.Mac_AAX_PATH }} --out ${{ env.Mac_AAX_PATH }} --autoinstall on
+        ${{ env.Mac_Wraptool_PATH }} sign --verbose --allowsigningservice --account ${{ secrets.ILOK_USERNAME }} --password ${{ secrets.ILOK_PASSWORD }} --signid "${{ secrets.DEVELOPER_ID_APPLICATION}}" --wcguid ${{ secrets.WCGUID }} --in ${{ env.Mac_AAX_PATH }} --out ${{ env.Mac_AAX_PATH }} --autoinstall on
         ${{ env.Mac_Wraptool_PATH }} verify --verbose --in ${{ env.Mac_AAX_PATH }}
 
   #pathto\wraptool sign --verbose --account “ilokusername” (--password “ilokpassword” )--in “pathto\Soundpaint.aaxplugin" --out "Soundpaint.aaxplugin" --keyfile “pathto\Certificates.p12” --keypassword “applepassword” --wcguid “FC40D120-B9DD-11EC-8D2C-005056920FF7”
